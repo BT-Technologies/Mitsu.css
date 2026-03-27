@@ -22,7 +22,6 @@ The goal is to deliver a **clean, scalable, and framework-agnostic UI system** w
 
 # Core Principles
 
-- 🚫 No Bootstrap
 - 🚫 No jQuery
 - 🎯 Utility-first + component-based approach
 - 🎨 Token-driven design system (light / dark themes)
