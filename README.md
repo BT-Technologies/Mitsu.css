@@ -1,39 +1,164 @@
-**Unfortunately Digital Surgeons has decided to retire Gumby Framework in order to focus our efforts on making other awesome things for the web. Please feel free to continue to use the framework, however development has ceased. If you are interested in inheriting the project please [get in touch](http://www.digitalsurgeons.com/contact/)!**
+# MitsuCSS Framework (2026)
 
-Gumby Framework [![Build Status](https://travis-ci.org/GumbyFramework/Gumby.svg?branch=master)](https://travis-ci.org/GumbyFramework/Gumby)
-=====================
+**MitsuCSS** is a modern CSS framework and UI toolkit, evolved from the legacy **Gumby 2.0** codebase and redesigned for current web standards.
 
-Gumby Framework is a flexible, responsive CSS Framework, Powered by SASS. Create rapid and logical page layout and app
-prototypes with a flexible and responsive grid system and UI kit.
+It provides a lightweight, dependency-free foundation for building responsive, accessible, and maintainable user interfaces.
 
-Full documentation can be found at [http://gumbyframework.com](http://gumbyframework.com/docs).
+---
 
-More information, including our changelog, can be found in the [Wiki](https://github.com/GumbyFramework/Gumby/wiki).
+# Overview
 
-Our [Google Plus Community](https://plus.google.com/u/0/communities/108760896951473344451) is rapidly growing, we recommend heading over there with any questions you may have or to geek out and discuss the framework and rwd in general.
+MitsuCSS is designed as a **modular front-end framework**, combining:
 
-Gumby is developed with love by your friends at [Digital Surgeons](http://www.digitalsurgeons.com).
+- Design tokens
+- Layout primitives
+- UI components
+- Utility classes
+- Minimal JavaScript behaviors
 
-Gumby has a few dependencies. Big thank you to the innovative geniuses behind these awesome technologies.
+The goal is to deliver a **clean, scalable, and framework-agnostic UI system** without relying on heavy external libraries.
 
-- [Sass](https://github.com/nex3/sass) - Nathan Weizenbaum
-- [Compass](https://github.com/chriseppstein/compass) - Chris Eppstein
-- [Modular Scale](https://github.com/Team-Sass/modular-scale) - Scott Kellum  *Note: Please use modular scale 1.0.6, 2.x has not been integrated yet*
-- [FitText](http://fittextjs.com/) - Paravel
-- [jQuery](http://jquery.com/)
-- [Modernizr](http://modernizr.com/)
+---
 
-**MIT Open Source License**
+# Core Principles
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
-persons to whom the Software is furnished to do so, subject to the following conditions:
+- 🚫 No Bootstrap
+- 🚫 No jQuery
+- 🎯 Utility-first + component-based approach
+- 🎨 Token-driven design system (light / dark themes)
+- ♿ Accessibility-first (ARIA + keyboard support)
+- ⚡ Lightweight and fast
+- 📱 Fully responsive (Grid + Flexbox)
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
+---
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# Project Structure
+
+```
+project-root/
+│
+├── css/
+│   ├── mitsucss.css     # Core framework styles
+│   └── style.css        # Project/demo overrides
+│
+├── js/
+│   ├── libs/
+│   │   └── mitsucss.js  # Core framework JS
+│   └── main.js          # Demo initialization
+│
+├── index.html           # Framework overview
+├── tokens.html          # Design tokens
+├── layout.html          # Layout system
+├── components.html      # Components showcase
+├── utilities.html       # Utility classes
+├── demo.html            # Playground
+├── ui.html              # UI showcase
+```
+
+---
+
+# Core Files
+
+| File | Description |
+|---|---|
+| `css/mitsucss.css` | Core framework (tokens, layout, components, utilities) |
+| `js/libs/mitsucss.js` | Runtime API (`MitsuCSS.ready()`, `MitsuCSS.init()`) |
+| `css/style.css` | Custom project styles |
+| `js/main.js` | Demo boot logic |
+
+---
+
+# JavaScript API
+
+MitsuCSS provides a minimal runtime API:
+
+```js
+MitsuCSS.ready(() => {
+  MitsuCSS.init();
+});
+```
+
+### Data Attributes
+
+| Attribute | Description |
+|---|---|
+| `data-mitsu-toggle` | Toggle elements (menus, modals, etc.) |
+| `data-mitsu-tabs` | Tab navigation behavior |
+
+---
+
+# Pages
+
+| Page | Description |
+|---|---|
+| `index.html` | Overview and navigation |
+| `tokens.html` | Design tokens |
+| `layout.html` | Layout primitives |
+| `components.html` | UI components |
+| `utilities.html` | Utility classes |
+| `demo.html` | Interactive playground |
+| `ui.html` | Full UI showcase |
+
+---
+
+# 2026 Standards
+
+MitsuCSS follows modern front-end practices:
+
+- Tokenized design system
+- Native CSS variables
+- CSS Grid and Flexbox layouts
+- Semantic HTML structure
+- Accessible components with ARIA states
+- Keyboard-friendly interactions
+- Reduced motion support
+- Non-blocking JavaScript
+
+---
+
+# Migration from Gumby
+
+Legacy **Gumby 2.0** assets are still included for compatibility, but MitsuCSS is now the **active baseline**.
+
+### Migration Steps
+
+1. Keep existing HTML structure where possible.
+2. Replace old classes with MitsuCSS utilities/components.
+3. Migrate JS behavior to:
+   - `data-mitsu-toggle`
+   - `data-mitsu-tabs`
+4. Move custom styles to `css/style.css`.
+
+---
+
+# Philosophy
+
+MitsuCSS is built to be:
+
+- Simple to adopt
+- Easy to extend
+- Framework-agnostic
+- Free of unnecessary dependencies
+
+It is not meant to compete with large ecosystems, but to provide a **clean and controlled UI foundation**.
+
+---
+
+# Status
+
+| Area | Status |
+|---|---|
+| Core CSS | Stable |
+| Components | In progress |
+| JavaScript API | Stable |
+| Documentation | In progress |
+
+---
+
+# License
+
+This project is **proprietary**.
+
+Usage, distribution, or modification is restricted without authorization from:
+
+**BT-Tech Developers Labs**
