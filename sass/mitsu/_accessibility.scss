@@ -1,0 +1,19 @@
+@media (max-width: 47.99rem) {
+  .mitsu-nav-list {
+    flex-direction: column;
+    padding-block: var(--mitsu-space-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+
+  .mitsu-attention-pulse,
+  .mitsu-attention-shake {
+    animation: none !important;
+  }
+}

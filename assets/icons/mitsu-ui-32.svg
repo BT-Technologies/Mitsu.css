@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .mi {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <symbol id="mi-home" viewBox="0 0 32 32">
+    <path class="mi" d="M4 15 16 5l12 10"/>
+    <path class="mi" d="M7 14v13h18V14"/>
+    <path class="mi" d="M13 27v-7h6v7"/>
+  </symbol>
+
+  <symbol id="mi-search" viewBox="0 0 32 32">
+    <circle class="mi" cx="14" cy="14" r="8"/>
+    <path class="mi" d="m20 20 8 8"/>
+  </symbol>
+
+  <symbol id="mi-user" viewBox="0 0 32 32">
+    <circle class="mi" cx="16" cy="11" r="5"/>
+    <path class="mi" d="M6 27c1.8-4.7 5.5-7 10-7s8.2 2.3 10 7"/>
+  </symbol>
+
+  <symbol id="mi-users" viewBox="0 0 32 32">
+    <circle class="mi" cx="12" cy="12" r="4"/>
+    <circle class="mi" cx="21" cy="11" r="3"/>
+    <path class="mi" d="M4 27c1.5-4.4 4.5-6.5 8-6.5S18.5 22.6 20 27"/>
+    <path class="mi" d="M18 27c1-2.8 3-4.1 5.4-4.1 2.1 0 3.6.8 4.6 2.5"/>
+  </symbol>
+
+  <symbol id="mi-settings" viewBox="0 0 32 32">
+    <circle class="mi" cx="16" cy="16" r="3.5"/>
+    <path class="mi" d="M16 6v3M16 23v3M6 16h3M23 16h3M9.4 9.4l2.1 2.1M20.5 20.5l2.1 2.1M22.6 9.4l-2.1 2.1M11.5 20.5l-2.1 2.1"/>
+    <circle class="mi" cx="16" cy="16" r="9"/>
+  </symbol>
+
+  <symbol id="mi-bell" viewBox="0 0 32 32">
+    <path class="mi" d="M8 13a8 8 0 0 1 16 0v6l2 3H6l2-3z"/>
+    <path class="mi" d="M13 25a3 3 0 0 0 6 0"/>
+  </symbol>
+
+  <symbol id="mi-mail" viewBox="0 0 32 32">
+    <rect class="mi" x="4" y="7" width="24" height="18" rx="2"/>
+    <path class="mi" d="m5 9 11 9 11-9"/>
+  </symbol>
+
+  <symbol id="mi-chat" viewBox="0 0 32 32">
+    <path class="mi" d="M6 7h20a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H14l-6 4v-4H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/>
+  </symbol>
+
+  <symbol id="mi-calendar" viewBox="0 0 32 32">
+    <rect x="5" y="7" width="22" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 5v4M22 5v4M5 12h22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="10" y="16" width="4" height="4" rx="0.7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <rect x="18" y="16" width="4" height="4" rx="0.7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <rect x="10" y="22" width="4" height="3" rx="0.7" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="mi-clock" viewBox="0 0 32 32">
+    <circle class="mi" cx="16" cy="16" r="11"/>
+    <path class="mi" d="M16 10v7l5 3"/>
+  </symbol>
+
+  <symbol id="mi-check" viewBox="0 0 32 32">
+    <path class="mi" d="m7 16 6 6L25 10"/>
+  </symbol>
+
+  <symbol id="mi-close" viewBox="0 0 32 32">
+    <path class="mi" d="M8 8l16 16M24 8 8 24"/>
+  </symbol>
+
+  <symbol id="mi-alert" viewBox="0 0 32 32">
+    <path class="mi" d="M16 5 3.5 26h25z"/>
+    <path class="mi" d="M16 12v7M16 23h.01"/>
+  </symbol>
+
+  <symbol id="mi-info" viewBox="0 0 32 32">
+    <circle class="mi" cx="16" cy="16" r="11"/>
+    <path class="mi" d="M16 14v7M16 10h.01"/>
+  </symbol>
+
+  <symbol id="mi-plus" viewBox="0 0 32 32">
+    <path class="mi" d="M16 7v18M7 16h18"/>
+  </symbol>
+
+  <symbol id="mi-minus" viewBox="0 0 32 32">
+    <path class="mi" d="M7 16h18"/>
+  </symbol>
+
+  <symbol id="mi-edit" viewBox="0 0 32 32">
+    <path class="mi" d="m21 6 5 5-13.5 13.5L7 26l1.5-5.5z"/>
+    <path class="mi" d="m18 9 5 5"/>
+  </symbol>
+
+  <symbol id="mi-trash" viewBox="0 0 32 32">
+    <path class="mi" d="M6 9h20M12 9V6h8v3"/>
+    <rect class="mi" x="8" y="9" width="16" height="18" rx="2"/>
+    <path class="mi" d="M13 13v10M19 13v10"/>
+  </symbol>
+
+  <symbol id="mi-download" viewBox="0 0 32 32">
+    <path class="mi" d="M16 6v13"/>
+    <path class="mi" d="m10 14 6 6 6-6"/>
+    <path class="mi" d="M6 25h20"/>
+  </symbol>
+
+  <symbol id="mi-upload" viewBox="0 0 32 32">
+    <path class="mi" d="M16 26V13"/>
+    <path class="mi" d="m22 18-6-6-6 6"/>
+    <path class="mi" d="M6 7h20"/>
+  </symbol>
+
+  <symbol id="mi-link" viewBox="0 0 32 32">
+    <path class="mi" d="M13 19 9.5 22.5a4.2 4.2 0 0 1-6-6L7 13"/>
+    <path class="mi" d="M19 13 22.5 9.5a4.2 4.2 0 0 1 6 6L25 19"/>
+    <path class="mi" d="m11 21 10-10"/>
+  </symbol>
+
+  <symbol id="mi-lock" viewBox="0 0 32 32">
+    <rect class="mi" x="7" y="14" width="18" height="13" rx="2"/>
+    <path class="mi" d="M11 14v-3a5 5 0 0 1 10 0v3"/>
+  </symbol>
+
+  <symbol id="mi-unlock" viewBox="0 0 32 32">
+    <rect class="mi" x="7" y="14" width="18" height="13" rx="2"/>
+    <path class="mi" d="M11 14v-3a5 5 0 0 1 8.5-3.5"/>
+  </symbol>
+
+  <symbol id="mi-eye" viewBox="0 0 32 32">
+    <path class="mi" d="M3 16s5-7 13-7 13 7 13 7-5 7-13 7S3 16 3 16z"/>
+    <circle class="mi" cx="16" cy="16" r="3"/>
+  </symbol>
+
+  <symbol id="mi-eye-off" viewBox="0 0 32 32">
+    <path class="mi" d="M3 16s5-7 13-7 13 7 13 7-5 7-13 7S3 16 3 16z"/>
+    <path class="mi" d="M5 5l22 22"/>
+  </symbol>
+
+  <symbol id="mi-star" viewBox="0 0 32 32">
+    <path class="mi" d="m16 5 3.3 6.7 7.4 1.1-5.4 5.3 1.3 7.5L16 22l-6.6 3.6 1.3-7.5-5.4-5.3 7.4-1.1z"/>
+  </symbol>
+
+  <symbol id="mi-heart" viewBox="0 0 32 32">
+    <path class="mi" d="M16 26s-9-5.5-9-12a5.5 5.5 0 0 1 9-4.2A5.5 5.5 0 0 1 25 14c0 6.5-9 12-9 12z"/>
+  </symbol>
+
+  <symbol id="mi-folder" viewBox="0 0 32 32">
+    <path class="mi" d="M4 10h9l2 2h13v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+  </symbol>
+
+  <symbol id="mi-file" viewBox="0 0 32 32">
+    <path class="mi" d="M9 5h10l4 4v18H9z"/>
+    <path class="mi" d="M19 5v4h4"/>
+    <path class="mi" d="M12 16h8M12 20h8"/>
+  </symbol>
+
+  <symbol id="mi-filter" viewBox="0 0 32 32">
+    <path class="mi" d="M5 7h22l-8 9v8l-6 3v-11z"/>
+  </symbol>
+
+  <symbol id="mi-menu" viewBox="0 0 32 32">
+    <path class="mi" d="M6 9h20M6 16h20M6 23h20"/>
+  </symbol>
+
+  <symbol id="mi-more" viewBox="0 0 32 32">
+    <circle class="mi" cx="9" cy="16" r="1.5"/>
+    <circle class="mi" cx="16" cy="16" r="1.5"/>
+    <circle class="mi" cx="23" cy="16" r="1.5"/>
+  </symbol>
+
+  <symbol id="mi-chevron-left" viewBox="0 0 32 32">
+    <path class="mi" d="m20 7-9 9 9 9"/>
+  </symbol>
+
+  <symbol id="mi-chevron-right" viewBox="0 0 32 32">
+    <path class="mi" d="m12 7 9 9-9 9"/>
+  </symbol>
+</svg>

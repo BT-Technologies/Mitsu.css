@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MitsuCSS complete UI component index.">
+  <title>MitsuCSS UI Components Index</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/mitsu.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="mitsu-skip-link" href="#content">Skip to content</a>
+
+  <header class="mitsu-navbar mitsu-border-bottom">
+    <div class="mitsu-container mitsu-row mitsu-items-center mitsu-justify-between mitsu-py-md">
+      <strong class="mitsu-logo"><img class="mitsu-logo-mark img-nav" src="favicon.svg" alt="" aria-hidden="true"> <span>MitsuCSS UI Index</span></strong>
+      <div class="mitsu-row mitsu-items-center mitsu-gap-sm">
+        <nav aria-label="UI navigation">
+          <ul class="mitsu-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tokens.html">Tokens</a></li>
+            <li><a href="layout.html">Layout</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="utilities.html">Utilities</a></li>
+            <li><a href="demo.html">Demo</a></li>
+          </ul>
+        </nav>
+        <button class="mitsu-btn mitsu-btn-ghost theme-toggle-icon" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false" title="Toggle theme">☀</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="mitsu-container mitsu-stack-lg mitsu-py-xl">
+    <section class="mitsu-card mitsu-stack-md">
+      <h1>UI Components</h1>
+      <p class="text-xs leading-normal">Complete visual index of current MitsuCSS components, interaction patterns, and utility compositions.</p>
+      <p class="text-xs leading-normal">This page is designed as a production reference: each section shows practical examples, behavior notes, and implementation-ready markup.</p>
+      <p class="text-xs leading-normal">Use it to choose the right component quickly, apply consistent UI decisions, and accelerate build quality across screens.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <a href="#navigation">Navigation</a>
+        <a href="#icons">Icons</a>
+        <a href="#cards">Cards</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#badges">Badges</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#tabs">Tabs</a>
+        <a href="#dialog">Dialog</a>
+        <a href="#forms">Forms</a>
+        <a href="#layout-utils">Layout Utilities</a>
+      </div>
+    </section>
+
+    <section id="navigation" class="mitsu-card mitsu-stack-sm">
+      <h2>Navigation</h2>
+      <p>Use nav lists for page-level movement and in-page jumps. Keep labels short and task-oriented.</p>
+      <div class="mitsu-component-help">
+        <p><strong>When to use:</strong> Top-level page navigation, local section navigation, and simple link clusters.</p>
+        <p><strong>Classes:</strong> <code>.mitsu-navbar</code>, <code>.mitsu-nav-list</code></p>
+      </div>
+      <nav aria-label="Sample component nav">
+        <ul class="mitsu-nav-list">
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#tabs">Tabs</a></li>
+          <li><a href="#forms">Forms</a></li>
+        </ul>
+      </nav>
+      <aside class="mitsu-sidenav" aria-label="Component side navigation demo">
+        <p class="mitsu-sidenav-title">Forms and input</p>
+        <div class="mitsu-sidenav-group">
+          <details class="mitsu-sidenav-toggle" open>
+            <summary>Button</summary>
+            <ul class="mitsu-sidenav-sub">
+              <li><a href="#buttons">Icon button</a></li>
+              <li><a href="#buttons">Link button</a></li>
+              <li><a href="#buttons">Link icon button</a></li>
+              <li><a href="#buttons">Split button</a></li>
+              <li><a class="is-active" href="#buttons">Button group</a></li>
+            </ul>
+          </details>
+        </div>
+      </aside>
+      <p><code>.mitsu-navbar</code> and <code>.mitsu-nav-list</code> provide consistent header/navigation patterns.</p>
+      <p class="text-xs color-muted">Helper per item: use <code>.mitsu-sidenav</code> for docs side menus, <code>&lt;details&gt;</code> groups for collapsible sections, and <code>.is-active</code> on the current page item.</p>
+      <p class="text-xs color-muted">Helper per item: keep nav labels under 2 words and map each link to one clear destination.</p>
+    </section>
+
+    <section id="icons" class="mitsu-card mitsu-stack-sm">
+      <h2>Icons (32x32 UI Set)</h2>
+      <p>Complete MitsuCSS UI icon pack in 32x32 vector format (SVG sprite) for app development.</p>
+      <div class="mitsu-component-help">
+        <p><strong>Sprite file:</strong> <code>assets/icons/mitsu-ui-32.svg</code></p>
+        <p><strong>How to use:</strong> <code>&lt;svg class="mitsu-icon mitsu-icon-32"&gt;&lt;use href="assets/icons/mitsu-ui-32.svg#mi-home"&gt;&lt;/use&gt;&lt;/svg&gt;</code></p>
+      </div>
+      <div class="icon-demo-grid">
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-home" xlink:href="assets/icons/mitsu-ui-32.svg#mi-home"></use></svg><span class="icon-demo-label">mi-home</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-search" xlink:href="assets/icons/mitsu-ui-32.svg#mi-search"></use></svg><span class="icon-demo-label">mi-search</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-user" xlink:href="assets/icons/mitsu-ui-32.svg#mi-user"></use></svg><span class="icon-demo-label">mi-user</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-users" xlink:href="assets/icons/mitsu-ui-32.svg#mi-users"></use></svg><span class="icon-demo-label">mi-users</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-settings" xlink:href="assets/icons/mitsu-ui-32.svg#mi-settings"></use></svg><span class="icon-demo-label">mi-settings</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-bell" xlink:href="assets/icons/mitsu-ui-32.svg#mi-bell"></use></svg><span class="icon-demo-label">mi-bell</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-mail" xlink:href="assets/icons/mitsu-ui-32.svg#mi-mail"></use></svg><span class="icon-demo-label">mi-mail</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-chat" xlink:href="assets/icons/mitsu-ui-32.svg#mi-chat"></use></svg><span class="icon-demo-label">mi-chat</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-calendar" xlink:href="assets/icons/mitsu-ui-32.svg#mi-calendar"></use></svg><span class="icon-demo-label">mi-calendar</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-clock" xlink:href="assets/icons/mitsu-ui-32.svg#mi-clock"></use></svg><span class="icon-demo-label">mi-clock</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-check" xlink:href="assets/icons/mitsu-ui-32.svg#mi-check"></use></svg><span class="icon-demo-label">mi-check</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-close" xlink:href="assets/icons/mitsu-ui-32.svg#mi-close"></use></svg><span class="icon-demo-label">mi-close</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-alert" xlink:href="assets/icons/mitsu-ui-32.svg#mi-alert"></use></svg><span class="icon-demo-label">mi-alert</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-info" xlink:href="assets/icons/mitsu-ui-32.svg#mi-info"></use></svg><span class="icon-demo-label">mi-info</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-plus" xlink:href="assets/icons/mitsu-ui-32.svg#mi-plus"></use></svg><span class="icon-demo-label">mi-plus</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-minus" xlink:href="assets/icons/mitsu-ui-32.svg#mi-minus"></use></svg><span class="icon-demo-label">mi-minus</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-edit" xlink:href="assets/icons/mitsu-ui-32.svg#mi-edit"></use></svg><span class="icon-demo-label">mi-edit</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-trash" xlink:href="assets/icons/mitsu-ui-32.svg#mi-trash"></use></svg><span class="icon-demo-label">mi-trash</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-download" xlink:href="assets/icons/mitsu-ui-32.svg#mi-download"></use></svg><span class="icon-demo-label">mi-download</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-upload" xlink:href="assets/icons/mitsu-ui-32.svg#mi-upload"></use></svg><span class="icon-demo-label">mi-upload</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-link" xlink:href="assets/icons/mitsu-ui-32.svg#mi-link"></use></svg><span class="icon-demo-label">mi-link</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-lock" xlink:href="assets/icons/mitsu-ui-32.svg#mi-lock"></use></svg><span class="icon-demo-label">mi-lock</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-unlock" xlink:href="assets/icons/mitsu-ui-32.svg#mi-unlock"></use></svg><span class="icon-demo-label">mi-unlock</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-eye" xlink:href="assets/icons/mitsu-ui-32.svg#mi-eye"></use></svg><span class="icon-demo-label">mi-eye</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-eye-off" xlink:href="assets/icons/mitsu-ui-32.svg#mi-eye-off"></use></svg><span class="icon-demo-label">mi-eye-off</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-star" xlink:href="assets/icons/mitsu-ui-32.svg#mi-star"></use></svg><span class="icon-demo-label">mi-star</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-heart" xlink:href="assets/icons/mitsu-ui-32.svg#mi-heart"></use></svg><span class="icon-demo-label">mi-heart</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-folder" xlink:href="assets/icons/mitsu-ui-32.svg#mi-folder"></use></svg><span class="icon-demo-label">mi-folder</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-file" xlink:href="assets/icons/mitsu-ui-32.svg#mi-file"></use></svg><span class="icon-demo-label">mi-file</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-filter" xlink:href="assets/icons/mitsu-ui-32.svg#mi-filter"></use></svg><span class="icon-demo-label">mi-filter</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-menu" xlink:href="assets/icons/mitsu-ui-32.svg#mi-menu"></use></svg><span class="icon-demo-label">mi-menu</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-more" xlink:href="assets/icons/mitsu-ui-32.svg#mi-more"></use></svg><span class="icon-demo-label">mi-more</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-chevron-left" xlink:href="assets/icons/mitsu-ui-32.svg#mi-chevron-left"></use></svg><span class="icon-demo-label">mi-chevron-left</span></div>
+        <div class="icon-demo-item"><svg class="mitsu-icon mitsu-icon-32"><use href="assets/icons/mitsu-ui-32.svg#mi-chevron-right" xlink:href="assets/icons/mitsu-ui-32.svg#mi-chevron-right"></use></svg><span class="icon-demo-label">mi-chevron-right</span></div>
+      </div>
+      <p class="text-xs color-muted">Helper per item: use class <code>.mitsu-icon-32</code> for 32px size, <code>.mitsu-icon-24</code> for compact UI, and keep icon color inherited from text color for theme consistency.</p>
+    </section>
+
+    <section id="cards" class="mitsu-card mitsu-stack-sm">
+      <h2>Cards</h2>
+      <p>Cards are surface containers for grouped content. This demo includes the 4 production card patterns and reveal/flip behavior.</p>
+      <div class="mitsu-component-help">
+        <p><strong>When to use:</strong> Use a card when content belongs to one idea, action, or media item.</p>
+        <p><strong>Classes:</strong> <code>.mitsu-card</code> + demo helpers <code>.cards-demo-*</code> for presentation patterns.</p>
+      </div>
+      <div class="cards-demo-grid">
+        <article class="mitsu-card mitsu-stack-sm cards-demo-item cards-reveal">
+          <h3>1. Normal Card</h3>
+          <p>Title and body only. Best for short summaries, metrics, and compact explanations.</p>
+          <p class="text-xs color-muted">Helper: keep this variant clean, with one clear message and no media noise.</p>
+        </article>
+        <article class="mitsu-card mitsu-stack-sm cards-demo-item cards-reveal">
+          <h3>2. Image Card</h3>
+          <div class="card-media card-media-landscape" role="img" aria-label="Decorative placeholder media for image card"></div>
+          <p>Title, image, and body. Good for product previews, docs highlights, and release notes.</p>
+          <p class="text-xs color-muted">Helper: media first, then concise text. Keep image ratio stable across a list.</p>
+        </article>
+        <article class="mitsu-card mitsu-stack-sm cards-demo-item cards-reveal">
+          <h3>3. Action Card</h3>
+          <div class="card-media card-media-soft" role="img" aria-label="Decorative action card media"></div>
+          <p>Title, body, optional image, and action controls for direct task completion.</p>
+          <div class="mitsu-row mitsu-gap-xs">
+            <button class="mitsu-btn mitsu-btn-success mitsu-btn-sm">Approve</button>
+            <a class="lnk" href="components.html">Read details</a>
+          </div>
+          <p class="text-xs color-muted">Helper: use one main CTA and one secondary link only.</p>
+        </article>
+        <article class="mitsu-card cards-demo-item cards-reveal">
+          <h3>4. Flip Image Card</h3>
+          <div class="card-flip" data-mitsu-flip>
+            <button class="card-flip-inner" type="button" aria-label="Flip card to reveal details" aria-pressed="false">
+              <span class="card-flip-face card-flip-front">
+                <span class="card-media card-media-tall" aria-hidden="true"></span>
+                <span class="text-xs color-muted">Click to reveal details</span>
+              </span>
+              <span class="card-flip-face card-flip-back">
+                <strong>Back Content</strong>
+                <span>Use for hidden metadata, quick notes, or extra context after click.</span>
+              </span>
+            </button>
+          </div>
+          <p class="text-xs color-muted">Helper: this pattern is interactive; keep back text short and action-focused.</p>
+        </article>
+      </div>
+      <p class="text-xs color-muted">Helper per item: reveal animation runs on load; flip card toggles front/back on click and keyboard.</p>
+    </section>
+
+    <section id="buttons" class="mitsu-card mitsu-stack-sm">
+      <h2>Buttons</h2>
+      <p>Select <strong>?</strong> on any example to see how to use it.</p>
+
+      <p class="text-sm"><strong>Tones:</strong> primary, semantic states, and support actions.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><button class="mitsu-btn">Primary</button><button class="mitsu-help-btn" aria-label="How to use primary">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn</code> for the main action of a section or form.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-info">Info</button><button class="mitsu-help-btn" aria-label="How to use info">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-info</code> for details/help actions.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-success">Success</button><button class="mitsu-help-btn" aria-label="How to use success">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-success</code> for save/confirm actions.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-warning">Warning</button><button class="mitsu-help-btn" aria-label="How to use warning">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-warning</code> before risky but reversible actions.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-danger">Danger</button><button class="mitsu-help-btn" aria-label="How to use danger">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-danger</code> for destructive/irreversible actions.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-secondary">Secondary</button><button class="mitsu-help-btn" aria-label="How to use secondary">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-secondary</code> for support actions next to primary.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-ghost">Ghost</button><button class="mitsu-help-btn" aria-label="How to use ghost">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-ghost</code> for low-emphasis actions.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Sizes:</strong> compact to large CTA scale.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-sm">Small</button><button class="mitsu-help-btn" aria-label="How to use small">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-sm</code> in dense UIs like tables and toolbars.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-md">Medium</button><button class="mitsu-help-btn" aria-label="How to use medium">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-md</code> as default balanced size.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-lg">Large</button><button class="mitsu-help-btn" aria-label="How to use large">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-lg</code> for key CTA and touch-first targets.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Icons and badges:</strong> quick recognition plus status counters.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-info"><span class="mitsu-btn-icon" aria-hidden="true">i</span>Icon + Text</button><button class="mitsu-help-btn" aria-label="How to use icon plus text">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-icon</code> with a text label for better recognition.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-warning mitsu-btn-icon-only" aria-label="Bell"><span class="mitsu-btn-icon" aria-hidden="true">!</span></button><button class="mitsu-help-btn" aria-label="How to use icon only">?</button><span class="mitsu-help-tip">Icon-only buttons need <code>aria-label</code> and should map to common actions.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-success">Inbox <span class="mitsu-btn-badge">3</span></button><button class="mitsu-help-btn" aria-label="How to use badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-badge</code> for counts or state in action buttons.</span></span>
+        <span class="mitsu-help-inline"><a class="mitsu-btn mitsu-btn-danger" href="demo.html"><span class="mitsu-btn-icon" aria-hidden="true">x</span>Link Button <span class="mitsu-btn-badge">9</span></a><button class="mitsu-help-btn" aria-label="How to use link button">?</button><span class="mitsu-help-tip">Use an anchor with <code>.mitsu-btn</code> when action must navigate.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Outline styles:</strong> lighter emphasis and high-attention double outline.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-info mitsu-btn-outline">Info Outline</button><button class="mitsu-help-btn" aria-label="How to use outline">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-outline</code> for secondary emphasis.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-success mitsu-btn-outline">Success Outline</button><button class="mitsu-help-btn" aria-label="How to use success outline">?</button><span class="mitsu-help-tip">Keep outline tone aligned with the action intent.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-warning mitsu-btn-outline mitsu-btn-double-outline">Warning Double</button><button class="mitsu-help-btn" aria-label="How to use warning double">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-double-outline</code> only for high-attention cases.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-danger mitsu-btn-outline mitsu-btn-double-outline">Danger Double</button><button class="mitsu-help-btn" aria-label="How to use danger double">?</button><span class="mitsu-help-tip">Double outline works best when danger action must stand out.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Button groups:</strong> segmented controls for related actions.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <div class="mitsu-help-inline"><div class="mitsu-btn-group" role="group" aria-label="Compact grouping"><button class="mitsu-btn mitsu-btn-sm mitsu-btn-secondary">Left</button><button class="mitsu-btn mitsu-btn-sm">Center</button><button class="mitsu-btn mitsu-btn-sm mitsu-btn-secondary">Right</button></div><button class="mitsu-help-btn" aria-label="How to use compact button group">?</button><span class="mitsu-help-tip">Use <code>.mitsu-btn-group</code> for tightly related options.</span></div>
+        <div class="mitsu-help-inline"><div class="mitsu-btn-group" role="group" aria-label="Action grouping"><button class="mitsu-btn mitsu-btn-info">New</button><button class="mitsu-btn mitsu-btn-success">Save</button><button class="mitsu-btn mitsu-btn-warning">Publish</button></div><button class="mitsu-help-btn" aria-label="How to use action button group">?</button><span class="mitsu-help-tip">Action groups should follow real workflow order.</span></div>
+        <div class="mitsu-help-inline"><div class="mitsu-btn-group" role="group" aria-label="Cancel alert done group"><button class="mitsu-btn mitsu-btn-secondary"><span class="mitsu-btn-icon" aria-hidden="true">x</span>Cancel</button><button class="mitsu-btn mitsu-btn-warning"><span class="mitsu-btn-icon" aria-hidden="true">!</span>Alert</button><button class="mitsu-btn mitsu-btn-success"><span class="mitsu-btn-icon" aria-hidden="true">ok</span>Done</button></div><button class="mitsu-help-btn" aria-label="How to use icon button group">?</button><span class="mitsu-help-tip">Icon groups are best for quick state transitions: cancel, warn, done.</span></div>
+      </div>
+    </section>
+
+    <section id="badges" class="mitsu-card mitsu-stack-sm">
+      <h2>Badges</h2>
+      <p>Select <strong>?</strong> on any badge example to see how to use it.</p>
+      <p class="text-sm"><strong>States:</strong> semantic tone and meaning.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-default">Default</span><button class="mitsu-help-btn" aria-label="How to use default badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-default</code> for neutral metadata.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-info">Info</span><button class="mitsu-help-btn" aria-label="How to use info badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-info</code> for guidance or informational states.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-new">New</span><button class="mitsu-help-btn" aria-label="How to use new badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-new</code> for recently added items.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-success">Success</span><button class="mitsu-help-btn" aria-label="How to use success badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-success</code> for positive/complete status.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-warning">Warning</span><button class="mitsu-help-btn" aria-label="How to use warning badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-warning</code> for caution states.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-danger">Error</span><button class="mitsu-help-btn" aria-label="How to use danger badge">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-danger</code> for blocking/problem states.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Advanced:</strong> icons and sub-badges.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-info"><span class="mitsu-badge-icon" aria-hidden="true">i</span>Info With Icon</span><button class="mitsu-help-btn" aria-label="How to use icon badge">?</button><span class="mitsu-help-tip">Add <code>.mitsu-badge-icon</code> for fast visual scanning.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge mitsu-badge-new"><span class="mitsu-badge-icon" aria-hidden="true">+</span>New Release</span><button class="mitsu-help-btn" aria-label="How to use new release badge">?</button><span class="mitsu-help-tip">Use icon + text for release, changelog, or version highlights.</span></span>
+        <span class="mitsu-help-inline"><span class="mitsu-badge-group"><span class="mitsu-badge mitsu-badge-new">New Product</span><span class="mitsu-badge mitsu-badge-danger mitsu-sub-badge">Hot Sale</span></span><button class="mitsu-help-btn" aria-label="How to use grouped badges">?</button><span class="mitsu-help-tip">Use <code>.mitsu-badge-group</code> + <code>.mitsu-sub-badge</code> for a secondary status.</span></span>
+      </div>
+    </section>
+
+    <section id="alerts" class="mitsu-card mitsu-stack-sm">
+      <h2>Alerts</h2>
+      <p>Select <strong>?</strong> on any alert example to see how to use it.</p>
+      <p class="text-sm"><strong>Tones:</strong> info, success, warning, danger, and neutral status.</p>
+      <div class="mitsu-stack-sm">
+        <div class="demo-help-line">
+          <article class="mitsu-alert mitsu-alert-info">
+            <span class="mitsu-alert-icon" aria-hidden="true">i</span>
+            <div><p class="mitsu-alert-title">Info</p><p class="mitsu-alert-copy">New account settings were applied successfully.</p></div>
+            <button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" data-mitsu-dismiss-size="sm" aria-label="Dismiss alert">x</button>
+          </article>
+          <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use info alert">?</button><span class="mitsu-help-tip">Use <code>.mitsu-alert-info</code> for guidance and non-blocking system feedback.</span></span>
+        </div>
+        <div class="demo-help-line">
+          <article class="mitsu-alert mitsu-alert-success">
+            <span class="mitsu-alert-icon" aria-hidden="true">ok</span>
+            <div><p class="mitsu-alert-title">Success</p><p class="mitsu-alert-copy">Backup completed and verified.</p></div>
+            <button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" data-mitsu-dismiss-size="md" aria-label="Dismiss alert">x</button>
+          </article>
+          <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use success alert">?</button><span class="mitsu-help-tip">Use <code>.mitsu-alert-success</code> after completed actions and positive outcomes.</span></span>
+        </div>
+        <div class="demo-help-line">
+          <article class="mitsu-alert mitsu-alert-warning" data-mitsu-attention="pulse">
+            <span class="mitsu-alert-icon" aria-hidden="true">!</span>
+            <div><p class="mitsu-alert-title">Warning</p><p class="mitsu-alert-copy">Storage is reaching 85% capacity.</p></div>
+            <button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" data-mitsu-dismiss-size="lg" aria-label="Dismiss alert">x</button>
+          </article>
+          <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use warning alert">?</button><span class="mitsu-help-tip">Use <code>.mitsu-alert-warning</code> for caution. Optional <code>data-mitsu-attention="pulse"</code> adds emphasis.</span></span>
+        </div>
+        <div class="demo-help-line">
+          <article class="mitsu-alert mitsu-alert-danger" data-mitsu-attention="shake">
+            <span class="mitsu-alert-icon" aria-hidden="true">x</span>
+            <div><p class="mitsu-alert-title">Error</p><p class="mitsu-alert-copy">Payment method was declined.</p></div>
+            <button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" data-mitsu-dismiss-height="1.95rem" aria-label="Dismiss alert">x</button>
+          </article>
+          <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use danger alert">?</button><span class="mitsu-help-tip">Use <code>.mitsu-alert-danger</code> for blocking issues. Custom dismiss size with <code>data-mitsu-dismiss-height</code>.</span></span>
+        </div>
+        <div class="demo-help-line">
+          <article class="mitsu-alert mitsu-alert-neutral">
+            <span class="mitsu-alert-icon" aria-hidden="true">...</span>
+            <div><p class="mitsu-alert-title">Neutral</p><p class="mitsu-alert-copy">Maintenance window starts in 30 minutes.</p></div>
+            <button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" aria-label="Dismiss alert">x</button>
+          </article>
+          <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use neutral alert">?</button><span class="mitsu-help-tip">Use <code>.mitsu-alert-neutral</code> for non-critical notices and upcoming events.</span></span>
+        </div>
+      </div>
+      <p class="text-sm"><strong>Dismiss controls:</strong> you can move and resize the close <code>x</code> button.</p>
+      <p class="text-sm">Use <code>data-mitsu-dismiss-side="left|right"</code> to choose where the <code>x</code> appears.</p>
+      <p class="text-sm">Use <code>data-mitsu-dismiss-size="sm|md|lg"</code> to apply a preset close-button size.</p>
+      <p class="text-sm">Use <code>data-mitsu-dismiss-height="1.65rem"</code> when you need a custom close-button height.</p>
+    </section>
+
+    <section id="tabs" class="mitsu-card mitsu-stack-sm">
+      <h2>Tabs</h2>
+      <p>Select <strong>?</strong> on any tab type to see how to use it.</p>
+
+      <p class="text-sm"><strong>Horizontal tabs:</strong> standard row for most app sections.</p>
+      <div class="demo-help-line">
+        <div class="mitsu-tabs tabs-variant-standard" data-mitsu-tabs>
+          <div class="mitsu-tab-list" role="tablist" aria-label="Standard horizontal tabs">
+            <button role="tab" aria-selected="true" aria-controls="tab-h-1" id="tab-h-btn-1">Overview</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-h-2" id="tab-h-btn-2">Activity</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-h-3" id="tab-h-btn-3">Files</button>
+          </div>
+          <section id="tab-h-1" role="tabpanel" aria-labelledby="tab-h-btn-1" class="mitsu-tab-panel">
+            <p class="text-sm">Overview panel: summary content and key metrics.</p>
+          </section>
+          <section id="tab-h-2" role="tabpanel" aria-labelledby="tab-h-btn-2" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Activity panel: timeline, logs, and updates.</p>
+          </section>
+          <section id="tab-h-3" role="tabpanel" aria-labelledby="tab-h-btn-3" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Files panel: uploads, versions, and attachments.</p>
+          </section>
+        </div>
+        <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use horizontal tabs">?</button><span class="mitsu-help-tip">Use horizontal tabs when screen width is enough and all tab labels are short.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Vertical tabs:</strong> upright navigation for longer labels.</p>
+      <div class="demo-help-line">
+        <div class="mitsu-tabs tabs-variant-vertical" data-mitsu-tabs>
+          <div class="mitsu-tab-list" role="tablist" aria-label="Vertical tabs">
+            <button role="tab" aria-selected="true" aria-controls="tab-v-1" id="tab-v-btn-1">Profile Settings</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-v-2" id="tab-v-btn-2">Billing Preferences</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-v-3" id="tab-v-btn-3">Security Access</button>
+          </div>
+          <section id="tab-v-1" role="tabpanel" aria-labelledby="tab-v-btn-1" class="mitsu-tab-panel">
+            <p class="text-sm">Profile settings content.</p>
+          </section>
+          <section id="tab-v-2" role="tabpanel" aria-labelledby="tab-v-btn-2" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Billing settings content.</p>
+          </section>
+          <section id="tab-v-3" role="tabpanel" aria-labelledby="tab-v-btn-3" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Security settings content.</p>
+          </section>
+        </div>
+        <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use vertical tabs">?</button><span class="mitsu-help-tip">Use vertical tabs for side menus, settings pages, or labels with many words.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Underline tabs:</strong> lightweight style for content-heavy pages.</p>
+      <div class="demo-help-line">
+        <div class="mitsu-tabs tabs-variant-underline" data-mitsu-tabs>
+          <div class="mitsu-tab-list" role="tablist" aria-label="Underline tabs">
+            <button role="tab" aria-selected="true" aria-controls="tab-u-1" id="tab-u-btn-1">Docs</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-u-2" id="tab-u-btn-2">API</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-u-3" id="tab-u-btn-3">Changelog</button>
+          </div>
+          <section id="tab-u-1" role="tabpanel" aria-labelledby="tab-u-btn-1" class="mitsu-tab-panel">
+            <p class="text-sm">Documentation panel with text-first content.</p>
+          </section>
+          <section id="tab-u-2" role="tabpanel" aria-labelledby="tab-u-btn-2" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">API panel with endpoints and examples.</p>
+          </section>
+          <section id="tab-u-3" role="tabpanel" aria-labelledby="tab-u-btn-3" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Changelog panel with release notes.</p>
+          </section>
+        </div>
+        <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use underline tabs">?</button><span class="mitsu-help-tip">Use underline tabs when you want low visual weight and fast scanning.</span></span>
+      </div>
+
+      <p class="text-sm"><strong>Pill tabs:</strong> compact segmented style for filters.</p>
+      <div class="demo-help-line">
+        <div class="mitsu-tabs tabs-variant-pills" data-mitsu-tabs>
+          <div class="mitsu-tab-list" role="tablist" aria-label="Pill tabs">
+            <button role="tab" aria-selected="true" aria-controls="tab-p-1" id="tab-p-btn-1">All</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-p-2" id="tab-p-btn-2">Open</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-p-3" id="tab-p-btn-3">Done</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-p-4" id="tab-p-btn-4">Archived</button>
+          </div>
+          <section id="tab-p-1" role="tabpanel" aria-labelledby="tab-p-btn-1" class="mitsu-tab-panel">
+            <p class="text-sm">All items panel.</p>
+          </section>
+          <section id="tab-p-2" role="tabpanel" aria-labelledby="tab-p-btn-2" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Open items panel.</p>
+          </section>
+          <section id="tab-p-3" role="tabpanel" aria-labelledby="tab-p-btn-3" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Done items panel.</p>
+          </section>
+          <section id="tab-p-4" role="tabpanel" aria-labelledby="tab-p-btn-4" class="mitsu-tab-panel mitsu-hidden">
+            <p class="text-sm">Archived items panel.</p>
+          </section>
+        </div>
+        <span class="mitsu-help-inline"><button class="mitsu-help-btn" aria-label="How to use pill tabs">?</button><span class="mitsu-help-tip">Use pill tabs as filter controls when users switch status often.</span></span>
+      </div>
+    </section>
+
+    <section id="dialog" class="mitsu-card mitsu-stack-sm">
+      <h2>Dialogs</h2>
+      <p>Select <strong>?</strong> on any dialog type to see how to use it.</p>
+      <p class="text-sm"><strong>Open choices:</strong> 1) top-down from parent, 2) modal outside-click close, 3) classic dialog, 4) window message with input.</p>
+
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-help-inline"><button class="mitsu-btn" data-mitsu-toggle="#dlg-drop-parent" aria-controls="dlg-drop-parent" aria-expanded="false">1. Open Top-Down</button><button class="mitsu-help-btn" aria-label="How to use top-down dialog">?</button><span class="mitsu-help-tip">Top-down dialog opens from a parent container. Best for local inline actions inside a section.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-info" data-mitsu-toggle="#dlg-modal" aria-controls="dlg-modal" aria-expanded="false">2. Open Modal</button><button class="mitsu-help-btn" aria-label="How to use modal dialog">?</button><span class="mitsu-help-tip">Modal blocks the page until user decides. Click outside closes this demo modal.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-secondary" data-mitsu-toggle="#dlg-classic" aria-controls="dlg-classic" aria-expanded="false">3. Open Classic</button><button class="mitsu-help-btn" aria-label="How to use classic dialog">?</button><span class="mitsu-help-tip">Classic dialog is neutral and reusable for confirmations and short notices.</span></span>
+        <span class="mitsu-help-inline"><button class="mitsu-btn mitsu-btn-success" data-mitsu-toggle="#dlg-window" aria-controls="dlg-window" aria-expanded="false">4. Open Window Msg</button><button class="mitsu-help-btn" aria-label="How to use window dialog">?</button><span class="mitsu-help-tip">Window-style message works for quick input or simple question prompts.</span></span>
+      </div>
+
+      <div class="dialog-drop-parent">
+        <div id="dlg-drop-parent" class="dialog-drop mitsu-hidden" role="dialog" aria-modal="false" aria-labelledby="dlg-drop-title">
+          <div class="dialog-drop-card mitsu-stack-sm">
+            <h3 id="dlg-drop-title">Top-Down Panel</h3>
+            <p class="text-sm">This dialog drops from the parent area instead of using full-screen overlay.</p>
+            <div class="mitsu-row mitsu-gap-sm">
+              <button class="mitsu-btn mitsu-btn-sm">Confirm</button>
+              <button class="mitsu-btn mitsu-btn-secondary mitsu-btn-sm" data-mitsu-toggle="#dlg-drop-parent" aria-controls="dlg-drop-parent" aria-expanded="true">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dlg-modal" class="mitsu-dialog mitsu-hidden" data-mitsu-outside-close="true" role="dialog" aria-modal="true" aria-labelledby="dlg-modal-title">
+        <div class="mitsu-dialog-card mitsu-stack-sm">
+          <h3 id="dlg-modal-title">Modal Dialog</h3>
+          <p>Click outside this card to close (demo behavior), or use buttons below.</p>
+          <div class="mitsu-row mitsu-gap-sm">
+            <button class="mitsu-btn mitsu-btn-info">Continue</button>
+            <button class="mitsu-btn mitsu-btn-secondary" data-mitsu-toggle="#dlg-modal" aria-controls="dlg-modal" aria-expanded="true">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="dlg-classic" class="mitsu-dialog mitsu-hidden" role="dialog" aria-modal="true" aria-labelledby="dlg-classic-title">
+        <div class="mitsu-dialog-card mitsu-stack-sm">
+          <h3 id="dlg-classic-title">Classic Dialog</h3>
+          <p>Standard centered dialog for confirmation or compact info.</p>
+          <button class="mitsu-btn mitsu-btn-secondary" data-mitsu-toggle="#dlg-classic" aria-controls="dlg-classic" aria-expanded="true">Close</button>
+        </div>
+      </div>
+
+      <div id="dlg-window" class="mitsu-dialog mitsu-hidden dialog-window-shell" role="dialog" aria-modal="true" aria-labelledby="dlg-window-title">
+        <div class="mitsu-dialog-card dialog-window-card mitsu-stack-sm">
+          <div class="dialog-window-head">
+            <h3 id="dlg-window-title">Quick Question</h3>
+            <button class="mitsu-btn mitsu-btn-ghost mitsu-btn-sm" data-mitsu-toggle="#dlg-window" aria-controls="dlg-window" aria-expanded="true">x</button>
+          </div>
+          <p>What should we name this release?</p>
+          <label class="mitsu-label" for="dlg-window-input">Release name</label>
+          <input id="dlg-window-input" class="mitsu-input" type="text" placeholder="MitsuCSS 3.1">
+          <div class="mitsu-row mitsu-gap-sm">
+            <button class="mitsu-btn mitsu-btn-success">Send</button>
+            <button class="mitsu-btn mitsu-btn-secondary" data-mitsu-toggle="#dlg-window" aria-controls="dlg-window" aria-expanded="true">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mitsu-helper mitsu-stack-sm code-assist">
+        <h3 class="mitsu-helper-title">Code Assist: Create A Dialog</h3>
+        <p class="text-sm">Use one snippet below as a quick starting point.</p>
+        <p class="text-sm"><strong>1. Top-Down (from parent)</strong></p>
+        <pre><code>&lt;button class="mitsu-btn" data-mitsu-toggle="#my-drop"&gt;Open&lt;/button&gt;
+&lt;div class="dialog-drop-parent"&gt;
+  &lt;div id="my-drop" class="dialog-drop mitsu-hidden"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-sm"><strong>2. Modal (outside click close)</strong></p>
+        <pre><code>&lt;button class="mitsu-btn" data-mitsu-toggle="#my-modal"&gt;Open Modal&lt;/button&gt;
+&lt;div id="my-modal" class="mitsu-dialog mitsu-hidden" data-mitsu-outside-close="true"&gt;
+  &lt;div class="mitsu-dialog-card"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-sm"><strong>3. Classic dialog</strong></p>
+        <pre><code>&lt;button class="mitsu-btn" data-mitsu-toggle="#my-dialog"&gt;Open Dialog&lt;/button&gt;
+&lt;div id="my-dialog" class="mitsu-dialog mitsu-hidden"&gt;
+  &lt;div class="mitsu-dialog-card"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-sm"><strong>4. Window message (ask/input)</strong></p>
+        <pre><code>&lt;button class="mitsu-btn" data-mitsu-toggle="#my-window"&gt;Open Window&lt;/button&gt;
+&lt;div id="my-window" class="mitsu-dialog mitsu-hidden dialog-window-shell"&gt;
+  &lt;div class="mitsu-dialog-card dialog-window-card"&gt;...input...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="forms" class="mitsu-card mitsu-stack-sm">
+      <h2>Forms</h2>
+      <p>Use label/input pairs consistently for accessibility. Keep field groups short and aligned with user tasks.</p>
+      <div class="mitsu-component-help">
+        <p><strong>When to use:</strong> Data capture fields inside forms, dialogs, and settings pages.</p>
+        <p><strong>Classes:</strong> <code>.mitsu-label</code>, <code>.mitsu-input</code>. Pair every input with a visible label.</p>
+      </div>
+      <label class="mitsu-label" for="demo-input-email">Email</label>
+      <input id="demo-input-email" class="mitsu-input" type="email" placeholder="you@example.com">
+      <label class="mitsu-label" for="demo-input-name">Name</label>
+      <input id="demo-input-name" class="mitsu-input" type="text" placeholder="Jane Doe">
+      <p class="text-xs color-muted">Helper per item: always pair each input with a label and meaningful placeholder example.</p>
+    </section>
+
+    <section id="layout-utils" class="mitsu-card mitsu-stack-sm">
+      <h2>Layout Utilities</h2>
+      <p>Utility classes included in MitsuCSS:</p>
+      <p>These utilities are the base language for composition. Start with them before adding any custom layout CSS.</p>
+      <div class="mitsu-component-help">
+        <p><strong>When to use:</strong> Fast composition and spacing adjustments without creating additional CSS classes.</p>
+        <p><strong>Core utilities:</strong> <code>.mitsu-row</code>, <code>.mitsu-gap-sm</code>, <code>.mitsu-stack-*</code>, <code>.mitsu-grid</code>, <code>.mitsu-grid-3</code>, <code>.mitsu-hidden</code>.</p>
+      </div>
+      <div class="mitsu-row mitsu-gap-sm">
+        <span class="mitsu-badge">.mitsu-row</span>
+        <span class="mitsu-badge">.mitsu-gap-sm</span>
+        <span class="mitsu-badge">.mitsu-stack-sm/md/lg</span>
+        <span class="mitsu-badge">.mitsu-grid</span>
+        <span class="mitsu-badge">.mitsu-grid-3</span>
+        <span class="mitsu-badge">.mitsu-hidden</span>
+        <span class="mitsu-badge">.mitsu-py-md/xl</span>
+      </div>
+      <p class="text-xs color-muted">Helper per item: compose utilities first, then add custom CSS only when composition cannot express the layout.</p>
+    </section>
+  </main>
+
+  <script defer src="js/libs/mitsucss.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

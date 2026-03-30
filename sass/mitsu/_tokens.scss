@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Press+Start+2P&family=Playfair+Display:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap");
+
+:root {
+  --mitsu-bg: #f8fafc;
+  --mitsu-surface: #ffffff;
+  --mitsu-text: #101828;
+  --mitsu-muted: #475467;
+  --mitsu-font-ui: "Segoe UI", system-ui, sans-serif;
+  --mitsu-font-classic: "Merriweather", Georgia, serif;
+  --mitsu-font-pixel: "Press Start 2P", "Courier New", monospace;
+  --mitsu-font-beauty: "Playfair Display", "Times New Roman", serif;
+  --mitsu-font-nerdy: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --mitsu-primary: #1257d6;
+  --mitsu-primary-2: #0b42a9;
+  --mitsu-secondary: #e6edf8;
+  --mitsu-border: #d0d5dd;
+  --mitsu-danger: #c62828;
+  --mitsu-info: #075985;
+  --mitsu-success: #1d9d57;
+  --mitsu-warning: #b56a00;
+
+  /* Utility palette: main */
+  --mitsu-main-100: #dbeafe;
+  --mitsu-main-300: #93c5fd;
+  --mitsu-main-500: #3b82f6;
+  --mitsu-main-700: #1d4ed8;
+
+  /* Utility palette: extras */
+  --mitsu-extra-teal: #0d9488;
+  --mitsu-extra-orange: #ea580c;
+  --mitsu-extra-magenta: #c026d3;
+  --mitsu-extra-lime: #65a30d;
+
+  /* Utility palette: complementary */
+  --mitsu-comp-blue: #2563eb;
+  --mitsu-comp-amber: #f59e0b;
+  --mitsu-comp-indigo: #4f46e5;
+  --mitsu-comp-cyan: #0891b2;
+
+  /* Utility palette: darks */
+  --mitsu-dark-900: #0b1220;
+  --mitsu-dark-700: #1f2937;
+  --mitsu-dark-500: #334155;
+  --mitsu-dark-300: #475569;
+
+  /* Utility palette: lights */
+  --mitsu-light-000: #ffffff;
+  --mitsu-light-100: #f8fafc;
+  --mitsu-light-200: #eef2f7;
+  --mitsu-light-300: #e2e8f0;
+
+  --mitsu-radius-sm: 0.5rem;
+  --mitsu-radius-md: 0.8rem;
+  --mitsu-radius-lg: 1rem;
+
+  --mitsu-space-xs: 0.5rem;
+  --mitsu-space-sm: 0.75rem;
+  --mitsu-space-md: 1rem;
+  --mitsu-space-lg: 1.5rem;
+  --mitsu-space-xl: 2.5rem;
+
+  --mitsu-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
+  --mitsu-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.08);
+  --mitsu-shadow-sm: 0 4px 10px rgba(16, 24, 40, 0.1);
+  --mitsu-shadow-md: 0 10px 24px rgba(16, 24, 40, 0.14);
+  --mitsu-shadow-lg: 0 16px 38px rgba(16, 24, 40, 0.18);
+  --mitsu-shadow-xl: 0 22px 54px rgba(16, 24, 40, 0.22);
+  --mitsu-shadow-primary: 0 10px 28px color-mix(in oklab, var(--mitsu-primary) 32%, transparent);
+  --mitsu-shadow-info: 0 10px 28px color-mix(in oklab, var(--mitsu-info) 34%, transparent);
+  --mitsu-shadow-success: 0 10px 28px color-mix(in oklab, var(--mitsu-success) 34%, transparent);
+  --mitsu-shadow-danger: 0 10px 28px color-mix(in oklab, var(--mitsu-danger) 34%, transparent);
+  --mitsu-container: 72rem;
+}
+
+:root[data-theme="dark"] {
+  --mitsu-bg: #0b1220;
+  --mitsu-surface: #121a2b;
+  --mitsu-text: #e4e7ec;
+  --mitsu-muted: #98a2b3;
+  --mitsu-primary: #84c5ff;
+  --mitsu-primary-2: #a9d7ff;
+  --mitsu-secondary: #1f2a3d;
+  --mitsu-border: #344054;
+  --mitsu-danger: #ff6b6b;
+  --mitsu-info: #8fd8ff;
+  --mitsu-success: #5be09b;
+  --mitsu-warning: #ffc266;
+  --mitsu-main-100: #122033;
+  --mitsu-main-300: #1e3a5f;
+  --mitsu-main-500: #3b82f6;
+  --mitsu-main-700: #93c5fd;
+  --mitsu-extra-teal: #36d0c4;
+  --mitsu-extra-orange: #ff9a57;
+  --mitsu-extra-magenta: #ef7bff;
+  --mitsu-extra-lime: #a5df4e;
+  --mitsu-comp-blue: #8ab6ff;
+  --mitsu-comp-amber: #ffcf66;
+  --mitsu-comp-indigo: #a9a1ff;
+  --mitsu-comp-cyan: #79def5;
+  --mitsu-dark-900: #020617;
+  --mitsu-dark-700: #0f172a;
+  --mitsu-dark-500: #1e293b;
+  --mitsu-dark-300: #334155;
+  --mitsu-light-000: #f8fafc;
+  --mitsu-light-100: #e2e8f0;
+  --mitsu-light-200: #cbd5e1;
+  --mitsu-light-300: #94a3b8;
+  --mitsu-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --mitsu-shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.32);
+  --mitsu-shadow-md: 0 10px 24px rgba(0, 0, 0, 0.42);
+  --mitsu-shadow-lg: 0 16px 38px rgba(0, 0, 0, 0.5);
+  --mitsu-shadow-xl: 0 22px 54px rgba(0, 0, 0, 0.58);
+  --mitsu-shadow-primary: 0 10px 28px color-mix(in oklab, var(--mitsu-primary) 40%, transparent);
+  --mitsu-shadow-info: 0 10px 28px color-mix(in oklab, var(--mitsu-info) 40%, transparent);
+  --mitsu-shadow-success: 0 10px 28px color-mix(in oklab, var(--mitsu-success) 40%, transparent);
+  --mitsu-shadow-danger: 0 10px 28px color-mix(in oklab, var(--mitsu-danger) 40%, transparent);
+  --mitsu-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+

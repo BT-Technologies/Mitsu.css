@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MitsuCSS design tokens reference.">
+  <title>MitsuCSS Tokens</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/mitsu.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="mitsu-navbar mitsu-border-bottom"><div class="mitsu-container mitsu-row mitsu-items-center mitsu-justify-between mitsu-py-md"><strong class="mitsu-logo"><img class="mitsu-logo-mark img-nav" src="favicon.svg" alt="" aria-hidden="true"> <span>MitsuCSS Tokens</span></strong><ul class="mitsu-nav-list"><li><a href="index.html">Home</a></li><li><a href="layout.html">Layout</a></li><li><a href="components.html">Components</a></li><li><a href="utilities.html">Utilities</a></li></ul></div></header>
+  <main class="mitsu-container mitsu-stack-lg mitsu-py-xl">
+    <section class="mitsu-card mitsu-stack-sm"><h1>Design Tokens</h1><p>Base variables from <code>css/mitsu.css</code> drive colors, spacing, radius, and shadows.</p><p>Use these tokens as your source of truth. When branding changes, update tokens first so every component inherits the new style automatically.</p><p>Utility naming: use <code>color-*</code> for foreground text and <code>bgr-*</code> for background color.</p><p class="text-xs color-muted">Helper per item: each swatch item shows visual preview + exact token variable for copy/paste.</p></section>
+    
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Palette</h2>
+      <p>Color tokens define semantic intent (primary, info, danger) and structural layers (surface, border). Prefer token names over hardcoded hex values in app code.</p>
+      <div class="token-grid">
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-primary"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Primary</strong><span class="token-value">--mitsu-primary</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-primary-2"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Primary Alt</strong><span class="token-value">--mitsu-primary-2</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-secondary"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Secondary</strong><span class="token-value">--mitsu-secondary</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-surface"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Surface</strong><span class="token-value">--mitsu-surface</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-border"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Border</strong><span class="token-value">--mitsu-border</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-info"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Info</strong><span class="token-value">--mitsu-info</span></div>
+        </article>
+        <article class="token-swatch">
+          <div class="token-swatch-sample bgr-danger"></div>
+          <div class="token-swatch-meta"><strong class="token-name">Danger</strong><span class="token-value">--mitsu-danger</span></div>
+        </article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Utility Palette: Main</h2>
+      <p>Main utility colors are your primary production range for brand-forward UI surfaces, accents, and links.</p>
+      <div class="token-grid">
+        <article class="token-swatch"><div class="token-swatch-sample bgr-main-100"></div><div class="token-swatch-meta"><strong class="token-name">Main 100</strong><span class="token-value">--mitsu-main-100</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-main-300"></div><div class="token-swatch-meta"><strong class="token-name">Main 300</strong><span class="token-value">--mitsu-main-300</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-main-500"></div><div class="token-swatch-meta"><strong class="token-name">Main 500</strong><span class="token-value">--mitsu-main-500</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-main-700"></div><div class="token-swatch-meta"><strong class="token-name">Main 700</strong><span class="token-value">--mitsu-main-700</span></div></article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Utility Palette: Extras</h2>
+      <p>Extras are optional expressive tones for campaign UI, status accents, and non-core highlights.</p>
+      <div class="token-grid">
+        <article class="token-swatch"><div class="token-swatch-sample bgr-extra-teal"></div><div class="token-swatch-meta"><strong class="token-name">Extra Teal</strong><span class="token-value">--mitsu-extra-teal</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-extra-orange"></div><div class="token-swatch-meta"><strong class="token-name">Extra Orange</strong><span class="token-value">--mitsu-extra-orange</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-extra-magenta"></div><div class="token-swatch-meta"><strong class="token-name">Extra Magenta</strong><span class="token-value">--mitsu-extra-magenta</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-extra-lime"></div><div class="token-swatch-meta"><strong class="token-name">Extra Lime</strong><span class="token-value">--mitsu-extra-lime</span></div></article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Utility Palette: Complementary</h2>
+      <p>Complementary colors are tuned to pair with main tones in charts, dual-tone sections, and contrasting callouts.</p>
+      <div class="token-grid">
+        <article class="token-swatch"><div class="token-swatch-sample bgr-comp-blue"></div><div class="token-swatch-meta"><strong class="token-name">Comp Blue</strong><span class="token-value">--mitsu-comp-blue</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-comp-amber"></div><div class="token-swatch-meta"><strong class="token-name">Comp Amber</strong><span class="token-value">--mitsu-comp-amber</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-comp-indigo"></div><div class="token-swatch-meta"><strong class="token-name">Comp Indigo</strong><span class="token-value">--mitsu-comp-indigo</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-comp-cyan"></div><div class="token-swatch-meta"><strong class="token-name">Comp Cyan</strong><span class="token-value">--mitsu-comp-cyan</span></div></article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Utility Palette: Darks</h2>
+      <p>Dark utility shades are useful for depth, elevated contrast zones, and dense data surfaces.</p>
+      <div class="token-grid">
+        <article class="token-swatch"><div class="token-swatch-sample bgr-dark-900"></div><div class="token-swatch-meta"><strong class="token-name">Dark 900</strong><span class="token-value">--mitsu-dark-900</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-dark-700"></div><div class="token-swatch-meta"><strong class="token-name">Dark 700</strong><span class="token-value">--mitsu-dark-700</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-dark-500"></div><div class="token-swatch-meta"><strong class="token-name">Dark 500</strong><span class="token-value">--mitsu-dark-500</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-dark-300"></div><div class="token-swatch-meta"><strong class="token-name">Dark 300</strong><span class="token-value">--mitsu-dark-300</span></div></article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Utility Palette: Lights</h2>
+      <p>Light utility shades are ideal for subtle surfaces, separators, and low-emphasis backgrounds.</p>
+      <div class="token-grid">
+        <article class="token-swatch"><div class="token-swatch-sample bgr-light-000"></div><div class="token-swatch-meta"><strong class="token-name">Light 000</strong><span class="token-value">--mitsu-light-000</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-light-100"></div><div class="token-swatch-meta"><strong class="token-name">Light 100</strong><span class="token-value">--mitsu-light-100</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-light-200"></div><div class="token-swatch-meta"><strong class="token-name">Light 200</strong><span class="token-value">--mitsu-light-200</span></div></article>
+        <article class="token-swatch"><div class="token-swatch-sample bgr-light-300"></div><div class="token-swatch-meta"><strong class="token-name">Light 300</strong><span class="token-value">--mitsu-light-300</span></div></article>
+      </div>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Spacing Scale</h2>
+      <p>The spacing scale keeps rhythm consistent between components. Use adjacent scale steps for predictable visual hierarchy.</p>
+      <div class="scale-stack">
+        <div class="scale-row"><span class="token-value">--mitsu-space-xs</span><div class="scale-bar" style="width: var(--mitsu-space-xs);"></div></div>
+        <div class="scale-row"><span class="token-value">--mitsu-space-sm</span><div class="scale-bar" style="width: var(--mitsu-space-sm);"></div></div>
+        <div class="scale-row"><span class="token-value">--mitsu-space-md</span><div class="scale-bar" style="width: var(--mitsu-space-md);"></div></div>
+        <div class="scale-row"><span class="token-value">--mitsu-space-lg</span><div class="scale-bar" style="width: var(--mitsu-space-lg);"></div></div>
+        <div class="scale-row"><span class="token-value">--mitsu-space-xl</span><div class="scale-bar" style="width: var(--mitsu-space-xl);"></div></div>
+      </div>
+      <p>Real spacing utility examples (padding classes on real blocks):</p>
+      <div class="mitsu-grid mitsu-grid-3">
+        <div class="scale-demo-wrap"><div class="scale-demo-block mitsu-p-xs"><span class="token-value">.mitsu-p-xs</span></div></div>
+        <div class="scale-demo-wrap"><div class="scale-demo-block mitsu-p-sm"><span class="token-value">.mitsu-p-sm</span></div></div>
+        <div class="scale-demo-wrap"><div class="scale-demo-block mitsu-p-md"><span class="token-value">.mitsu-p-md</span></div></div>
+        <div class="scale-demo-wrap"><div class="scale-demo-block mitsu-p-lg"><span class="token-value">.mitsu-p-lg</span></div></div>
+        <div class="scale-demo-wrap"><div class="scale-demo-block mitsu-p-xl"><span class="token-value">.mitsu-p-xl</span></div></div>
+      </div>
+      <p class="text-xs color-muted">Helper per item: pick spacing steps progressively (xs-sm-md-lg-xl) to preserve visual rhythm.</p>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Width Scales</h2>
+      <p>Width utilities apply proportional widths for divs and layout blocks. Use these for quick prototypes or constrained content sections.</p>
+      <div class="mitsu-stack-sm">
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-25">.mitsu-w-25</div></div>
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-33">.mitsu-w-33</div></div>
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-50">.mitsu-w-50</div></div>
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-66">.mitsu-w-66</div></div>
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-75">.mitsu-w-75</div></div>
+        <div class="width-demo-track"><div class="width-demo-bar mitsu-w-100">.mitsu-w-100</div></div>
+      </div>
+      <p class="text-xs color-muted">Helper per item: width classes represent percentage tracks for fast layout prototyping.</p>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Height Scales</h2>
+      <p>Height utilities help normalize row/cell heights, placeholder blocks, and visual rhythm in dashboards and skeleton layouts.</p>
+      <div class="mitsu-grid mitsu-grid-3">
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-h-xs">.mitsu-h-xs</div></div>
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-h-sm">.mitsu-h-sm</div></div>
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-h-md">.mitsu-h-md</div></div>
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-h-lg">.mitsu-h-lg</div></div>
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-h-xl">.mitsu-h-xl</div></div>
+        <div class="height-demo-track"><div class="height-demo-bar mitsu-min-h-sm">.mitsu-min-h-sm</div></div>
+      </div>
+      <p class="text-xs color-muted">Helper per item: use fixed heights for controlled UI blocks and min-height for flexible cards.</p>
+    </section>
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Radius and Shadow</h2>
+      <p>Radius controls edge softness and shadow controls depth. Use smaller radius for compact controls and larger radius for cards/dialog surfaces.</p>
+      <p>Note: CSS does not support negative border-radius. MitsuCSS includes cut-corner utilities (<code>.mitsu-radius-cut-sm</code>, <code>.mitsu-radius-cut-md</code>) as a safe negative-like style.</p>
+      <h3>Radius Utilities</h3>
+      <div class="radius-demo-grid">
+        <div class="radius-demo-box mitsu-radius-none">.mitsu-radius-none</div>
+        <div class="radius-demo-box mitsu-radius-sm">.mitsu-radius-sm</div>
+        <div class="radius-demo-box mitsu-radius-md">.mitsu-radius-md</div>
+        <div class="radius-demo-box mitsu-radius-lg">.mitsu-radius-lg</div>
+        <div class="radius-demo-box mitsu-radius-pill">.mitsu-radius-pill</div>
+        <div class="radius-demo-box mitsu-radius-cut-sm">.mitsu-radius-cut-sm</div>
+        <div class="radius-demo-box mitsu-radius-cut-md">.mitsu-radius-cut-md</div>
+      </div>
+      <div class="mitsu-component-help">
+        <p><strong>Cut radius helper:</strong> <code>.mitsu-radius-cut-sm</code> and <code>.mitsu-radius-cut-md</code> create chamfered corners with matching shaped borders.</p>
+        <p><strong>Customize:</strong> <code>--mitsu-cut-size</code>, <code>--mitsu-cut-border-width</code>, <code>--mitsu-cut-border-color</code>, <code>--mitsu-cut-fill</code>.</p>
+      </div>
+      <h3>Shadow Sizes</h3>
+      <div class="shadow-demo-grid">
+        <div class="shadow-demo-box mitsu-shadow-xs">.mitsu-shadow-xs</div>
+        <div class="shadow-demo-box mitsu-shadow-sm">.mitsu-shadow-sm</div>
+        <div class="shadow-demo-box mitsu-shadow-md">.mitsu-shadow-md</div>
+        <div class="shadow-demo-box mitsu-shadow-lg">.mitsu-shadow-lg</div>
+        <div class="shadow-demo-box mitsu-shadow-xl">.mitsu-shadow-xl</div>
+      </div>
+      <h3>Shadow Colors</h3>
+      <div class="shadow-demo-grid">
+        <div class="shadow-demo-box mitsu-shadow-primary">.mitsu-shadow-primary</div>
+        <div class="shadow-demo-box mitsu-shadow-info">.mitsu-shadow-info</div>
+        <div class="shadow-demo-box mitsu-shadow-success">.mitsu-shadow-success</div>
+        <div class="shadow-demo-box mitsu-shadow-danger">.mitsu-shadow-danger</div>
+      </div>
+      <p class="text-xs color-muted">Helper per item: keep decorative shadows subtle; use color shadows only for state emphasis.</p>
+    </section>
+  </main>
+  <script defer src="js/libs/mitsucss.js"></script>
+</body>
+</html>

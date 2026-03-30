@@ -1,0 +1,660 @@
+/* MitsuCSS demo-layer styles (framework itself is in css/mitsu.css) */
+
+main section h2 {
+  margin-bottom: 0.4rem;
+}
+
+/* Professional typography using MitsuCSS font tokens */
+#content {
+  font-family: var(--mitsu-font-ui);
+}
+
+#content h1 {
+  font-family: var(--mitsu-font-beauty);
+  letter-spacing: -0.02em;
+}
+
+#content h2,
+#content h3 {
+  font-family: var(--mitsu-font-classic);
+}
+
+#content code,
+#content pre code {
+  font-family: var(--mitsu-font-nerdy);
+}
+
+main code {
+  background: color-mix(in oklab, var(--mitsu-secondary) 80%, transparent);
+  border: 1px solid var(--mitsu-border);
+  border-radius: 0.4rem;
+  padding: 0.05rem 0.35rem;
+}
+
+.token-grid {
+  display: grid;
+  gap: var(--mitsu-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.token-swatch {
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  overflow: hidden;
+  background: var(--mitsu-surface);
+}
+
+.token-swatch-sample {
+  height: 4.5rem;
+  border-bottom: 1px solid var(--mitsu-border);
+}
+
+.token-swatch-meta {
+  padding: 0.6rem 0.75rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.token-name {
+  font-size: 0.85rem;
+  color: var(--mitsu-muted);
+}
+
+.token-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+}
+
+.scale-stack {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.scale-row {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.scale-bar {
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--mitsu-primary);
+}
+
+.radius-row {
+  display: grid;
+  gap: var(--mitsu-space-sm);
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.radius-sample {
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-secondary);
+  padding: 0.7rem;
+}
+
+.example-shell {
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  padding: var(--mitsu-space-md);
+  background: color-mix(in oklab, var(--mitsu-secondary) 50%, transparent);
+}
+
+.layout-split {
+  display: grid;
+  gap: var(--mitsu-space-md);
+  grid-template-columns: minmax(11rem, 16rem) 1fr;
+}
+
+.layout-hero {
+  display: grid;
+  gap: var(--mitsu-space-md);
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.layout-rail {
+  display: grid;
+  gap: var(--mitsu-space-md);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.layout-preview-box {
+  min-height: 4.5rem;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: var(--mitsu-surface);
+  padding: var(--mitsu-space-sm);
+}
+
+.utility-line {
+  display: flex;
+  align-items: center;
+  gap: var(--mitsu-space-sm);
+}
+
+.utility-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-secondary);
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.25rem 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.mitsu-helper {
+  border: 1px solid color-mix(in oklab, var(--mitsu-info) 45%, var(--mitsu-border));
+  border-radius: var(--mitsu-radius-md);
+  background: color-mix(in oklab, var(--mitsu-info) 10%, var(--mitsu-surface));
+  padding: var(--mitsu-space-md);
+}
+
+.mitsu-helper-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--mitsu-info) 70%, var(--mitsu-text));
+}
+
+.mitsu-component-help {
+  border-left: 3px solid color-mix(in oklab, var(--mitsu-primary) 55%, var(--mitsu-border));
+  padding-left: 0.75rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.mitsu-component-help p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.scale-demo-wrap {
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  padding: var(--mitsu-space-sm);
+  background: color-mix(in oklab, var(--mitsu-secondary) 40%, transparent);
+}
+
+.scale-demo-block {
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-surface);
+  border-radius: var(--mitsu-radius-sm);
+}
+
+.width-demo-track {
+  width: 100%;
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  padding: var(--mitsu-space-xs);
+  background: color-mix(in oklab, var(--mitsu-secondary) 35%, transparent);
+}
+
+.width-demo-bar {
+  border-radius: var(--mitsu-radius-sm);
+  background: color-mix(in oklab, var(--mitsu-primary) 65%, white 10%);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.32rem 0.45rem;
+  min-width: 2.5rem;
+}
+
+.height-demo-track {
+  width: 100%;
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: color-mix(in oklab, var(--mitsu-secondary) 35%, transparent);
+  padding: var(--mitsu-space-xs);
+  display: grid;
+  align-items: end;
+  min-height: 4.2rem;
+}
+
+.height-demo-bar {
+  border-radius: var(--mitsu-radius-sm);
+  background: color-mix(in oklab, var(--mitsu-extra-teal) 75%, black 6%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  min-height: 1rem;
+}
+
+.text-demo-card {
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: var(--mitsu-surface);
+  padding: var(--mitsu-space-sm);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.position-demo-shell {
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  background: color-mix(in oklab, var(--mitsu-secondary) 40%, transparent);
+  min-height: 12rem;
+  padding: var(--mitsu-space-md);
+}
+
+.position-demo-anchor {
+  font-weight: 700;
+  color: var(--mitsu-muted);
+}
+
+.icon-demo-grid {
+  display: grid;
+  gap: var(--mitsu-space-sm);
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+}
+
+.icon-demo-item {
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: var(--mitsu-surface);
+  color: color-mix(in oklab, var(--mitsu-primary) 68%, var(--mitsu-text));
+  min-height: 5.5rem;
+  display: grid;
+  place-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  text-align: center;
+}
+
+.icon-demo-label {
+  font-size: 0.72rem;
+  color: var(--mitsu-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.icon-demo-item .mitsu-icon {
+  color: color-mix(in oklab, var(--mitsu-primary) 70%, var(--mitsu-text));
+}
+
+.radius-demo-grid,
+.shadow-demo-grid {
+  display: grid;
+  gap: var(--mitsu-space-sm);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.radius-demo-grid {
+  background: var(--mitsu-bg);
+  border: 1px dashed var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  padding: var(--mitsu-space-sm);
+}
+
+.radius-demo-box,
+.shadow-demo-box {
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-secondary);
+  min-height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.45rem;
+}
+
+.radius-demo-box.mitsu-radius-cut-sm,
+.radius-demo-box.mitsu-radius-cut-md {
+  --mitsu-cut-fill: var(--mitsu-secondary);
+  --mitsu-cut-border-color: var(--mitsu-border);
+  --mitsu-cut-border-width: 1px;
+}
+
+.demo-help-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.demo-help-line .mitsu-alert {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.demo-help-line .mitsu-tabs {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tabs-variant-vertical {
+  display: grid;
+  grid-template-columns: minmax(12rem, 15rem) 1fr;
+  gap: var(--mitsu-space-sm);
+  align-items: start;
+}
+
+.tabs-variant-vertical .mitsu-tab-list {
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.tabs-variant-vertical .mitsu-tab-panel {
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  padding: var(--mitsu-space-sm);
+  background: color-mix(in oklab, var(--mitsu-surface) 85%, white 15%);
+}
+
+.tabs-variant-underline {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.tabs-variant-underline .mitsu-tab-list {
+  gap: var(--mitsu-space-sm);
+  border-bottom: 1px solid var(--mitsu-border);
+  padding-bottom: 0.2rem;
+}
+
+.tabs-variant-underline .mitsu-tab-list [role="tab"] {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.4rem 0.1rem 0.52rem;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs-variant-underline .mitsu-tab-list [role="tab"][aria-selected="true"] {
+  color: var(--mitsu-primary);
+  background: transparent;
+  border-bottom-color: var(--mitsu-primary);
+}
+
+.tabs-variant-pills {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.tabs-variant-pills .mitsu-tab-list {
+  gap: 0.4rem;
+}
+
+.tabs-variant-pills .mitsu-tab-list [role="tab"] {
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--mitsu-secondary) 75%, white 25%);
+  padding-inline: 0.82rem;
+}
+
+.tabs-variant-pills .mitsu-tab-list [role="tab"][aria-selected="true"] {
+  background: color-mix(in oklab, var(--mitsu-primary) 82%, white 18%);
+}
+
+.dialog-drop-parent {
+  position: relative;
+  min-height: 0.2rem;
+  overflow: visible;
+}
+
+.dialog-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(34rem, calc(100% - 0.2rem));
+  z-index: 18;
+  margin-top: 0;
+}
+
+.dialog-drop-card {
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  background: var(--mitsu-surface);
+  box-shadow: var(--mitsu-shadow);
+  padding: var(--mitsu-space-sm);
+  animation: dialog-drop-in 320ms cubic-bezier(0.2, 0.9, 0.24, 1);
+}
+
+@keyframes dialog-drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+.dialog-window-shell {
+  align-items: start;
+  padding-top: min(10vh, 4rem);
+}
+
+.dialog-window-card {
+  width: min(34rem, 100%);
+  border-radius: var(--mitsu-radius-md);
+}
+
+.dialog-window-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mitsu-space-sm);
+  border-bottom: 1px solid var(--mitsu-border);
+  padding-bottom: var(--mitsu-space-xs);
+}
+
+.dialog-window-head h3 {
+  margin: 0;
+}
+
+.mitsu-helper pre {
+  margin: 0;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: color-mix(in oklab, var(--mitsu-secondary) 58%, transparent);
+  padding: 0.58rem 0.68rem;
+  overflow: auto;
+}
+
+.mitsu-helper pre code {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  white-space: pre;
+}
+
+.code-assist {
+  background: #1a1d20;
+  border-color: #2a3138;
+}
+
+.code-assist .mitsu-helper-title,
+.code-assist p {
+  color: #d6dde6;
+}
+
+.code-assist pre {
+  background: #121517;
+  border-color: #2f3943;
+}
+
+.code-assist pre code {
+  color: #86e38f;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.cards-demo-grid {
+  display: grid;
+  gap: var(--mitsu-space-sm);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.cards-demo-item {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    170deg,
+    color-mix(in oklab, var(--mitsu-surface) 88%, white 12%) 0%,
+    color-mix(in oklab, var(--mitsu-surface) 95%, var(--mitsu-secondary) 5%) 100%
+  );
+}
+
+.cards-demo-item h3 {
+  margin: 0;
+}
+
+.cards-reveal {
+  opacity: 0;
+  transform: translateY(0.75rem) scale(0.985);
+  animation: cards-reveal-in 480ms cubic-bezier(0.2, 0.9, 0.24, 1) forwards;
+}
+
+.cards-demo-grid > .cards-reveal:nth-child(1) {
+  animation-delay: 40ms;
+}
+
+.cards-demo-grid > .cards-reveal:nth-child(2) {
+  animation-delay: 110ms;
+}
+
+.cards-demo-grid > .cards-reveal:nth-child(3) {
+  animation-delay: 170ms;
+}
+
+.cards-demo-grid > .cards-reveal:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+@keyframes cards-reveal-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-media {
+  display: block;
+  width: 100%;
+  border: 1px solid color-mix(in oklab, var(--mitsu-primary) 22%, var(--mitsu-border));
+  border-radius: var(--mitsu-radius-sm);
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--mitsu-primary) 42%, white 58%), color-mix(in oklab, var(--mitsu-extra-teal) 60%, white 40%)),
+    radial-gradient(circle at 85% 18%, color-mix(in oklab, white 80%, transparent), transparent 44%);
+}
+
+.card-media-landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.card-media-soft {
+  aspect-ratio: 16 / 8;
+  background:
+    linear-gradient(160deg, color-mix(in oklab, var(--mitsu-secondary) 65%, white 35%), color-mix(in oklab, var(--mitsu-primary) 24%, white 76%)),
+    radial-gradient(circle at 22% 18%, color-mix(in oklab, var(--mitsu-warning) 20%, transparent), transparent 50%);
+}
+
+.card-media-tall {
+  aspect-ratio: 4 / 5;
+}
+
+.card-flip {
+  perspective: 1200px;
+}
+
+.card-flip-inner {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 460ms cubic-bezier(0.2, 0.9, 0.24, 1);
+  cursor: pointer;
+  padding: 0;
+}
+
+.card-flip.is-flipped .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: var(--mitsu-surface);
+  display: grid;
+  align-content: start;
+  gap: var(--mitsu-space-xs);
+  padding: var(--mitsu-space-xs);
+  text-align: left;
+  overflow: hidden;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklab, var(--mitsu-info) 16%, var(--mitsu-surface) 84%),
+    color-mix(in oklab, var(--mitsu-success) 12%, var(--mitsu-surface) 88%)
+  );
+}
+
+.card-flip-back strong {
+  font-size: 1rem;
+}
+
+.card-flip-back span {
+  font-size: 0.88rem;
+  color: var(--mitsu-muted);
+}
+
+.card-flip-front {
+  grid-template-rows: 1fr auto;
+  align-content: stretch;
+}
+
+.card-flip-front .card-media-tall {
+  height: 100%;
+  min-height: 8.5rem;
+  aspect-ratio: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .card-flip-inner {
+    transition: none;
+  }
+}
+
+@media (max-width: 60rem) {
+  .tabs-variant-vertical {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-variant-vertical .mitsu-tab-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .layout-split,
+  .layout-hero,
+  .layout-rail {
+    grid-template-columns: 1fr;
+  }
+}

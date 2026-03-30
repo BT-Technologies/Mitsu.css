@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--mitsu-font-ui);
+  line-height: 1.55;
+  color: var(--mitsu-text);
+  background:
+    radial-gradient(900px 320px at 90% -20%, color-mix(in oklab, var(--mitsu-primary) 18%, transparent), transparent 60%),
+    radial-gradient(900px 320px at 0% 120%, color-mix(in oklab, var(--mitsu-primary) 10%, transparent), transparent 60%),
+    var(--mitsu-bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--mitsu-primary);
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--mitsu-primary-2);
+}
+
+.lnk,
+.mitsu-link {
+  --lnk: #374151;
+  --lnk-h: #1f2937;
+  --lnk-v: #4b5563;
+  --lnk-a: #111827;
+  --lnk-f: color-mix(in oklab, var(--lnk) 48%, transparent);
+  --lnk-dot: currentColor;
+  color: var(--lnk);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  transition: color 160ms ease, background-size 180ms ease;
+}
+
+.lnk::before,
+.mitsu-link::before {
+  content: "";
+  width: 0.36rem;
+  height: 0.36rem;
+  border-radius: 50%;
+  background: var(--lnk-dot);
+  opacity: 0.85;
+  transition: opacity 160ms ease, transform 160ms ease, background-color 160ms ease;
+}
+
+.lnk:visited,
+.mitsu-link:visited {
+  color: var(--lnk-v);
+}
+
+.lnk:visited::before,
+.mitsu-link:visited::before {
+  opacity: 0;
+  transform: scale(0.65);
+}
+
+.lnk:hover,
+.mitsu-link:hover {
+  color: var(--lnk-h);
+  background-size: 100% 2px;
+}
+
+.lnk:hover::before,
+.mitsu-link:hover::before {
+  transform: scale(1.06);
+  animation: lnk-dot-pulse 900ms ease-in-out infinite;
+}
+
+.lnk:active,
+.mitsu-link:active {
+  color: var(--lnk-a);
+  background-position: 0 98%;
+  background-size: 100% 2px;
+}
+
+.lnk:focus-visible,
+.mitsu-link:focus-visible {
+  outline: 2px solid var(--lnk-f);
+  outline-offset: 0.16rem;
+  border-radius: 0.2rem;
+}
+
+.lnk-sub,
+.mitsu-link-subtle {
+  color: color-mix(in oklab, var(--mitsu-muted) 65%, var(--lnk) 35%);
+  text-decoration-thickness: 0.06em;
+  text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+}
+
+.lnk-quiet,
+.mitsu-link-quiet {
+  text-decoration-color: transparent;
+  background-size: 0 2px;
+}
+
+.lnk-quiet:hover,
+.lnk-quiet:focus-visible,
+.mitsu-link-quiet:hover,
+.mitsu-link-quiet:focus-visible {
+  color: var(--lnk);
+  text-decoration-color: transparent;
+  background-size: 0 2px;
+}
+
+.lnk-quiet:hover::before,
+.lnk-quiet:focus-visible::before,
+.mitsu-link-quiet:hover::before,
+.mitsu-link-quiet:focus-visible::before {
+  animation: none;
+  transform: none;
+}
+
+.lnk-off,
+.mitsu-link-off {
+  color: color-mix(in oklab, var(--mitsu-muted) 70%, var(--mitsu-light-300));
+  text-decoration-color: color-mix(in oklab, var(--mitsu-muted) 28%, transparent);
+  opacity: 0.62;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: saturate(0.55);
+}
+
+.lnk-off::before,
+.mitsu-link-off::before {
+  opacity: 0.4;
+  animation: none;
+}
+
+.lnk.vst::before,
+.mitsu-link.vst::before {
+  opacity: 0;
+  transform: scale(0.65);
+}
+
+.lnk.vst::after,
+.mitsu-link.vst::after {
+  content: "visited";
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--mitsu-muted) 86%, black 8%);
+  border: 1px solid color-mix(in oklab, var(--mitsu-border) 88%, transparent);
+  border-radius: 999px;
+  padding: 0.04rem 0.34rem;
+  background: color-mix(in oklab, var(--mitsu-light-100) 90%, transparent);
+}
+
+.lnk-off.vst::after,
+.mitsu-link-off.vst::after {
+  opacity: 0.7;
+}
+
+@keyframes lnk-dot-pulse {
+  0% { transform: scale(1); opacity: 0.82; }
+  50% { transform: scale(1.24); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lnk:hover::before,
+  .mitsu-link:hover::before {
+    animation: none;
+  }
+}
+
+.lnk-off:hover,
+.lnk-off:active,
+.lnk-off:focus-visible,
+.mitsu-link-off:hover,
+.mitsu-link-off:active,
+.mitsu-link-off:focus-visible {
+  color: color-mix(in oklab, var(--mitsu-muted) 70%, var(--mitsu-light-300));
+  text-decoration-color: color-mix(in oklab, var(--mitsu-muted) 28%, transparent);
+  text-underline-offset: 0.2em;
+  background-size: 0 2px;
+  outline: none;
+}
+
+/* docs state previews */
+.lnk-h,
+.mitsu-link-show-hover {
+  color: var(--lnk-h);
+  background-size: 100% 2px;
+}
+
+.lnk-v,
+.mitsu-link-show-visited {
+  color: var(--lnk-v);
+}
+
+.lnk-a,
+.mitsu-link-show-active {
+  color: var(--lnk-a);
+  background-position: 0 98%;
+  background-size: 100% 2px;
+}
+
+a.mitsu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MitsuCSS visual demo page.">
+  <title>MitsuCSS Demo</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/mitsu.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="mitsu-skip-link" href="#content">Skip to content</a>
+  <header class="mitsu-navbar mitsu-border-bottom">
+    <div class="mitsu-container mitsu-row mitsu-items-center mitsu-justify-between mitsu-py-md">
+      <strong class="mitsu-logo"><img class="mitsu-logo-mark img-nav" src="favicon.svg" alt="" aria-hidden="true"> <span>MitsuCSS Demo</span></strong>
+      <div class="mitsu-row mitsu-items-center mitsu-gap-sm">
+        <ul class="mitsu-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tokens.html">Tokens</a></li>
+          <li><a href="layout.html">Layout</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="ui.html">UI</a></li>
+        </ul>
+        <button class="mitsu-btn mitsu-btn-ghost theme-toggle-icon" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false" title="Toggle theme">☀</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="mitsu-container mitsu-stack-lg mitsu-py-xl">
+    <section class="mitsu-card mitsu-stack-md">
+      <p class="mitsu-eyebrow">Showcase</p>
+      <h1>MitsuCSS End-to-End Demo</h1>
+      <p class="mitsu-lead">A full page composition example combining layout primitives, utilities, and components.</p>
+      <p>Use this page to understand how sections connect in a realistic product screen. It demonstrates practical spacing, hierarchy, and interaction balance.</p>
+      <div class="mitsu-row mitsu-gap-sm">
+        <a class="mitsu-btn" href="ui.html">Component Index</a>
+        <a class="mitsu-btn mitsu-btn-secondary" href="layout.html">Layout Patterns</a>
+      </div>
+    </section>
+
+    <section class="example-shell layout-hero">
+      <article class="mitsu-card mitsu-stack-sm">
+        <h2>Release Overview</h2>
+        <p>This hero arrangement is ideal when you need one strong content block plus a compact action rail.</p>
+        <p>Current sprint ships a layout refactor, token update, and interaction polish.</p>
+        <div class="mitsu-row mitsu-gap-sm">
+          <span class="mitsu-badge">12 merged PRs</span>
+          <span class="mitsu-badge">0 critical bugs</span>
+        </div>
+      </article>
+      <aside class="mitsu-card mitsu-stack-sm">
+        <h3>Actions</h3>
+        <a class="mitsu-btn" href="components.html">Review components</a>
+        <a class="mitsu-btn mitsu-btn-secondary" href="utilities.html">Open utilities</a>
+      </aside>
+    </section>
+    <p class="text-xs color-muted">Helper per item: hero card = summary, action rail = quick links only, badges = compact KPI status.</p>
+
+    <section class="mitsu-grid mitsu-grid-3">
+      <article class="mitsu-card mitsu-stack-sm"><h3>How To Use This Band</h3><p>Use three cards for parallel summaries: roadmap, analytics, and integrations.</p></article>
+      <article class="mitsu-card mitsu-stack-sm"><h3>Roadmap</h3><p>Feature timeline and priorities.</p></article>
+      <article class="mitsu-card mitsu-stack-sm"><h3>Analytics</h3><p>Traffic and usage snapshots.</p></article>
+      <article class="mitsu-card mitsu-stack-sm"><h3>Integrations</h3><p>Connected services overview.</p></article>
+    </section>
+    <p class="text-xs color-muted">Helper per item: keep each card scoped to one theme so users can compare blocks quickly.</p>
+
+    <section class="mitsu-card mitsu-stack-sm">
+      <h2>Interactive Example</h2>
+      <p>Tabs keep related interactions in one panel. Keep each tab focused on one task to avoid overloaded screens.</p>
+      <div class="mitsu-tabs" data-mitsu-tabs>
+        <div class="mitsu-tab-list" role="tablist" aria-label="Demo tabs">
+          <button role="tab" aria-selected="true" aria-controls="d-tab-1" id="d-tab-btn-1">Alert</button>
+          <button role="tab" aria-selected="false" aria-controls="d-tab-2" id="d-tab-btn-2">Dialog</button>
+        </div>
+        <section id="d-tab-1" role="tabpanel" aria-labelledby="d-tab-btn-1" class="mitsu-tab-panel">
+          <article class="mitsu-alert mitsu-alert-success" data-mitsu-attention="pulse"><span class="mitsu-alert-icon" aria-hidden="true">ok</span><div><p class="mitsu-alert-title">System Healthy</p><p class="mitsu-alert-copy">All services are operating normally.</p></div><button class="mitsu-alert-dismiss" type="button" data-mitsu-dismiss data-mitsu-dismiss-side="left" data-mitsu-dismiss-height="1.65rem" aria-label="Dismiss alert">x</button></article>
+        </section>
+        <section id="d-tab-2" role="tabpanel" aria-labelledby="d-tab-btn-2" class="mitsu-tab-panel mitsu-hidden">
+          <button class="mitsu-btn" data-mitsu-toggle="#demo-dialog" aria-controls="demo-dialog" aria-expanded="false">Open Dialog</button>
+          <div id="demo-dialog" class="mitsu-dialog mitsu-hidden" role="dialog" aria-modal="true" aria-labelledby="demo-dialog-title">
+            <div class="mitsu-dialog-card mitsu-stack-sm">
+              <h3 id="demo-dialog-title">Demo Dialog</h3>
+              <p>Behavior powered by <code>data-mitsu-toggle</code>.</p>
+              <button class="mitsu-btn mitsu-btn-secondary" data-mitsu-toggle="#demo-dialog" aria-controls="demo-dialog">Close</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="text-xs color-muted">Helper per item: tab 1 shows status alert; tab 2 demonstrates toggle dialog behavior with minimal markup.</p>
+    </section>
+  </main>
+
+  <script defer src="js/libs/mitsucss.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

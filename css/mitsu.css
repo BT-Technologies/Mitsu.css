@@ -1,0 +1,1437 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Press+Start+2P&family=Playfair+Display:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap");
+
+:root {
+  --mitsu-bg: #f8fafc;
+  --mitsu-surface: #ffffff;
+  --mitsu-text: #101828;
+  --mitsu-muted: #475467;
+  --mitsu-font-ui: "Segoe UI", system-ui, sans-serif;
+  --mitsu-font-classic: "Merriweather", Georgia, serif;
+  --mitsu-font-pixel: "Press Start 2P", "Courier New", monospace;
+  --mitsu-font-beauty: "Playfair Display", "Times New Roman", serif;
+  --mitsu-font-nerdy: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --mitsu-primary: #1257d6;
+  --mitsu-primary-2: #0b42a9;
+  --mitsu-secondary: #e6edf8;
+  --mitsu-border: #d0d5dd;
+  --mitsu-danger: #c62828;
+  --mitsu-info: #075985;
+  --mitsu-success: #1d9d57;
+  --mitsu-warning: #b56a00;
+
+  /* Utility palette: main */
+  --mitsu-main-100: #dbeafe;
+  --mitsu-main-300: #93c5fd;
+  --mitsu-main-500: #3b82f6;
+  --mitsu-main-700: #1d4ed8;
+
+  /* Utility palette: extras */
+  --mitsu-extra-teal: #0d9488;
+  --mitsu-extra-orange: #ea580c;
+  --mitsu-extra-magenta: #c026d3;
+  --mitsu-extra-lime: #65a30d;
+
+  /* Utility palette: complementary */
+  --mitsu-comp-blue: #2563eb;
+  --mitsu-comp-amber: #f59e0b;
+  --mitsu-comp-indigo: #4f46e5;
+  --mitsu-comp-cyan: #0891b2;
+
+  /* Utility palette: darks */
+  --mitsu-dark-900: #0b1220;
+  --mitsu-dark-700: #1f2937;
+  --mitsu-dark-500: #334155;
+  --mitsu-dark-300: #475569;
+
+  /* Utility palette: lights */
+  --mitsu-light-000: #ffffff;
+  --mitsu-light-100: #f8fafc;
+  --mitsu-light-200: #eef2f7;
+  --mitsu-light-300: #e2e8f0;
+
+  --mitsu-radius-sm: 0.5rem;
+  --mitsu-radius-md: 0.8rem;
+  --mitsu-radius-lg: 1rem;
+
+  --mitsu-space-xs: 0.5rem;
+  --mitsu-space-sm: 0.75rem;
+  --mitsu-space-md: 1rem;
+  --mitsu-space-lg: 1.5rem;
+  --mitsu-space-xl: 2.5rem;
+
+  --mitsu-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
+  --mitsu-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.08);
+  --mitsu-shadow-sm: 0 4px 10px rgba(16, 24, 40, 0.1);
+  --mitsu-shadow-md: 0 10px 24px rgba(16, 24, 40, 0.14);
+  --mitsu-shadow-lg: 0 16px 38px rgba(16, 24, 40, 0.18);
+  --mitsu-shadow-xl: 0 22px 54px rgba(16, 24, 40, 0.22);
+  --mitsu-shadow-primary: 0 10px 28px color-mix(in oklab, var(--mitsu-primary) 32%, transparent);
+  --mitsu-shadow-info: 0 10px 28px color-mix(in oklab, var(--mitsu-info) 34%, transparent);
+  --mitsu-shadow-success: 0 10px 28px color-mix(in oklab, var(--mitsu-success) 34%, transparent);
+  --mitsu-shadow-danger: 0 10px 28px color-mix(in oklab, var(--mitsu-danger) 34%, transparent);
+  --mitsu-container: 72rem;
+}
+
+:root[data-theme="dark"] {
+  --mitsu-bg: #0b1220;
+  --mitsu-surface: #121a2b;
+  --mitsu-text: #e4e7ec;
+  --mitsu-muted: #98a2b3;
+  --mitsu-primary: #84c5ff;
+  --mitsu-primary-2: #a9d7ff;
+  --mitsu-secondary: #1f2a3d;
+  --mitsu-border: #344054;
+  --mitsu-danger: #ff6b6b;
+  --mitsu-info: #8fd8ff;
+  --mitsu-success: #5be09b;
+  --mitsu-warning: #ffc266;
+  --mitsu-main-100: #122033;
+  --mitsu-main-300: #1e3a5f;
+  --mitsu-main-500: #3b82f6;
+  --mitsu-main-700: #93c5fd;
+  --mitsu-extra-teal: #36d0c4;
+  --mitsu-extra-orange: #ff9a57;
+  --mitsu-extra-magenta: #ef7bff;
+  --mitsu-extra-lime: #a5df4e;
+  --mitsu-comp-blue: #8ab6ff;
+  --mitsu-comp-amber: #ffcf66;
+  --mitsu-comp-indigo: #a9a1ff;
+  --mitsu-comp-cyan: #79def5;
+  --mitsu-dark-900: #020617;
+  --mitsu-dark-700: #0f172a;
+  --mitsu-dark-500: #1e293b;
+  --mitsu-dark-300: #334155;
+  --mitsu-light-000: #f8fafc;
+  --mitsu-light-100: #e2e8f0;
+  --mitsu-light-200: #cbd5e1;
+  --mitsu-light-300: #94a3b8;
+  --mitsu-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --mitsu-shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.32);
+  --mitsu-shadow-md: 0 10px 24px rgba(0, 0, 0, 0.42);
+  --mitsu-shadow-lg: 0 16px 38px rgba(0, 0, 0, 0.5);
+  --mitsu-shadow-xl: 0 22px 54px rgba(0, 0, 0, 0.58);
+  --mitsu-shadow-primary: 0 10px 28px color-mix(in oklab, var(--mitsu-primary) 40%, transparent);
+  --mitsu-shadow-info: 0 10px 28px color-mix(in oklab, var(--mitsu-info) 40%, transparent);
+  --mitsu-shadow-success: 0 10px 28px color-mix(in oklab, var(--mitsu-success) 40%, transparent);
+  --mitsu-shadow-danger: 0 10px 28px color-mix(in oklab, var(--mitsu-danger) 40%, transparent);
+  --mitsu-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--mitsu-font-ui);
+  line-height: 1.55;
+  color: var(--mitsu-text);
+  background:
+    radial-gradient(900px 320px at 90% -20%, color-mix(in oklab, var(--mitsu-primary) 18%, transparent), transparent 60%),
+    radial-gradient(900px 320px at 0% 120%, color-mix(in oklab, var(--mitsu-primary) 10%, transparent), transparent 60%),
+    var(--mitsu-bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--mitsu-primary);
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--mitsu-primary-2);
+}
+
+.lnk,
+.mitsu-link {
+  --lnk: #374151;
+  --lnk-h: #1f2937;
+  --lnk-v: #4b5563;
+  --lnk-a: #111827;
+  --lnk-f: color-mix(in oklab, var(--lnk) 48%, transparent);
+  --lnk-dot: currentColor;
+  color: var(--lnk);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  transition: color 160ms ease, background-size 180ms ease;
+}
+
+.lnk::before,
+.mitsu-link::before {
+  content: "";
+  width: 0.36rem;
+  height: 0.36rem;
+  border-radius: 50%;
+  background: var(--lnk-dot);
+  opacity: 0.85;
+  transition: opacity 160ms ease, transform 160ms ease, background-color 160ms ease;
+}
+
+.lnk:visited,
+.mitsu-link:visited {
+  color: var(--lnk-v);
+}
+
+.lnk:visited::before,
+.mitsu-link:visited::before {
+  opacity: 0;
+  transform: scale(0.65);
+}
+
+.lnk:hover,
+.mitsu-link:hover {
+  color: var(--lnk-h);
+  background-size: 100% 2px;
+}
+
+.lnk:hover::before,
+.mitsu-link:hover::before {
+  transform: scale(1.06);
+  animation: lnk-dot-pulse 900ms ease-in-out infinite;
+}
+
+.lnk:active,
+.mitsu-link:active {
+  color: var(--lnk-a);
+  background-position: 0 98%;
+  background-size: 100% 2px;
+}
+
+.lnk:focus-visible,
+.mitsu-link:focus-visible {
+  outline: 2px solid var(--lnk-f);
+  outline-offset: 0.16rem;
+  border-radius: 0.2rem;
+}
+
+.lnk-sub,
+.mitsu-link-subtle {
+  color: color-mix(in oklab, var(--mitsu-muted) 65%, var(--lnk) 35%);
+  text-decoration-thickness: 0.06em;
+  text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+}
+
+.lnk-quiet,
+.mitsu-link-quiet {
+  text-decoration-color: transparent;
+  background-size: 0 2px;
+}
+
+.lnk-quiet:hover,
+.lnk-quiet:focus-visible,
+.mitsu-link-quiet:hover,
+.mitsu-link-quiet:focus-visible {
+  color: var(--lnk);
+  text-decoration-color: transparent;
+  background-size: 0 2px;
+}
+
+.lnk-quiet:hover::before,
+.lnk-quiet:focus-visible::before,
+.mitsu-link-quiet:hover::before,
+.mitsu-link-quiet:focus-visible::before {
+  animation: none;
+  transform: none;
+}
+
+.lnk-off,
+.mitsu-link-off {
+  color: color-mix(in oklab, var(--mitsu-muted) 70%, var(--mitsu-light-300));
+  text-decoration-color: color-mix(in oklab, var(--mitsu-muted) 28%, transparent);
+  opacity: 0.62;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: saturate(0.55);
+}
+
+.lnk-off::before,
+.mitsu-link-off::before {
+  opacity: 0.4;
+  animation: none;
+}
+
+.lnk.vst::before,
+.mitsu-link.vst::before {
+  opacity: 0;
+  transform: scale(0.65);
+}
+
+.lnk.vst::after,
+.mitsu-link.vst::after {
+  content: "visited";
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--mitsu-muted) 86%, black 8%);
+  border: 1px solid color-mix(in oklab, var(--mitsu-border) 88%, transparent);
+  border-radius: 999px;
+  padding: 0.04rem 0.34rem;
+  background: color-mix(in oklab, var(--mitsu-light-100) 90%, transparent);
+}
+
+.lnk-off.vst::after,
+.mitsu-link-off.vst::after {
+  opacity: 0.7;
+}
+
+@keyframes lnk-dot-pulse {
+  0% { transform: scale(1); opacity: 0.82; }
+  50% { transform: scale(1.24); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lnk:hover::before,
+  .mitsu-link:hover::before {
+    animation: none;
+  }
+}
+
+.lnk-off:hover,
+.lnk-off:active,
+.lnk-off:focus-visible,
+.mitsu-link-off:hover,
+.mitsu-link-off:active,
+.mitsu-link-off:focus-visible {
+  color: color-mix(in oklab, var(--mitsu-muted) 70%, var(--mitsu-light-300));
+  text-decoration-color: color-mix(in oklab, var(--mitsu-muted) 28%, transparent);
+  text-underline-offset: 0.2em;
+  background-size: 0 2px;
+  outline: none;
+}
+
+/* docs state previews */
+.lnk-h,
+.mitsu-link-show-hover {
+  color: var(--lnk-h);
+  background-size: 100% 2px;
+}
+
+.lnk-v,
+.mitsu-link-show-visited {
+  color: var(--lnk-v);
+}
+
+.lnk-a,
+.mitsu-link-show-active {
+  color: var(--lnk-a);
+  background-position: 0 98%;
+  background-size: 100% 2px;
+}
+
+a.mitsu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.mitsu-container {
+  width: min(100% - 2rem, var(--mitsu-container));
+  margin-inline: auto;
+}
+
+.mitsu-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mitsu-items-center { align-items: center; }
+.mitsu-justify-between { justify-content: space-between; }
+.mitsu-gap-sm { gap: var(--mitsu-space-sm); }
+.mitsu-gap-md { gap: var(--mitsu-space-md); }
+.mitsu-gap-xs { gap: var(--mitsu-space-xs); }
+.mitsu-gap-lg { gap: var(--mitsu-space-lg); }
+.mitsu-gap-xl { gap: var(--mitsu-space-xl); }
+
+.mitsu-stack-sm > * + * { margin-top: var(--mitsu-space-sm); }
+.mitsu-stack-md > * + * { margin-top: var(--mitsu-space-md); }
+.mitsu-stack-lg > * + * { margin-top: var(--mitsu-space-lg); }
+
+.mitsu-py-md { padding-block: var(--mitsu-space-md); }
+.mitsu-py-xl { padding-block: var(--mitsu-space-xl); }
+.mitsu-p-0 { padding: 0; }
+.mitsu-p-xs { padding: var(--mitsu-space-xs); }
+.mitsu-p-sm { padding: var(--mitsu-space-sm); }
+.mitsu-p-md { padding: var(--mitsu-space-md); }
+.mitsu-p-lg { padding: var(--mitsu-space-lg); }
+.mitsu-p-xl { padding: var(--mitsu-space-xl); }
+.mitsu-px-sm { padding-inline: var(--mitsu-space-sm); }
+.mitsu-px-md { padding-inline: var(--mitsu-space-md); }
+.mitsu-px-lg { padding-inline: var(--mitsu-space-lg); }
+.mitsu-py-sm { padding-block: var(--mitsu-space-sm); }
+.mitsu-py-lg { padding-block: var(--mitsu-space-lg); }
+
+.mitsu-m-0 { margin: 0; }
+.mitsu-m-xs { margin: var(--mitsu-space-xs); }
+.mitsu-m-sm { margin: var(--mitsu-space-sm); }
+.mitsu-m-md { margin: var(--mitsu-space-md); }
+.mitsu-m-lg { margin: var(--mitsu-space-lg); }
+.mitsu-m-xl { margin: var(--mitsu-space-xl); }
+.mitsu-mt-sm { margin-top: var(--mitsu-space-sm); }
+.mitsu-mt-md { margin-top: var(--mitsu-space-md); }
+.mitsu-mt-lg { margin-top: var(--mitsu-space-lg); }
+.mitsu-mb-sm { margin-bottom: var(--mitsu-space-sm); }
+.mitsu-mb-md { margin-bottom: var(--mitsu-space-md); }
+.mitsu-mb-lg { margin-bottom: var(--mitsu-space-lg); }
+
+.mitsu-border-top { border-top: 1px solid var(--mitsu-border); }
+.mitsu-border-bottom { border-bottom: 1px solid var(--mitsu-border); }
+
+/* Image size utilities */
+.img-small-more { width: 1rem; height: 1rem; }
+.img-small { width: 1.5rem; height: 1.5rem; }
+.img-normal { width: 2rem; height: 2rem; }
+.img-big { width: 3rem; height: 3rem; }
+.img-bigger { width: 4rem; height: 4rem; }
+.img-nav { width: 1.2rem; height: 1.2rem; }
+.img-parent-10 { width: 10%; height: auto; max-width: 100%; }
+.img-parent-25 { width: 25%; height: auto; max-width: 100%; }
+.img-parent-50 { width: 50%; height: auto; max-width: 100%; }
+.img-parent-75 { width: 75%; height: auto; max-width: 100%; }
+.img-parent-100 { width: 100%; height: auto; max-width: 100%; }
+.img-round { border-radius: 50%; }
+.img-cover { object-fit: cover; }
+.img-contain { object-fit: contain; }
+
+.mitsu-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: currentColor;
+}
+
+.mitsu-icon-32 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.mitsu-icon-24 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mitsu-icon-16 {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Simple color utility aliases */
+.color-primary { color: var(--mitsu-primary); }
+.color-primary-2 { color: var(--mitsu-primary-2); }
+.color-text { color: var(--mitsu-text); }
+.color-muted { color: var(--mitsu-muted); }
+.color-secondary { color: var(--mitsu-secondary); }
+.color-surface { color: var(--mitsu-surface); }
+.color-border { color: var(--mitsu-border); }
+.color-info { color: var(--mitsu-info); }
+.color-danger { color: var(--mitsu-danger); }
+.color-success { color: var(--mitsu-success); }
+.color-warning { color: var(--mitsu-warning); }
+.color-main-100 { color: var(--mitsu-main-100); }
+.color-main-300 { color: var(--mitsu-main-300); }
+.color-main-500 { color: var(--mitsu-main-500); }
+.color-main-700 { color: var(--mitsu-main-700); }
+.color-extra-teal { color: var(--mitsu-extra-teal); }
+.color-extra-orange { color: var(--mitsu-extra-orange); }
+.color-extra-magenta { color: var(--mitsu-extra-magenta); }
+.color-extra-lime { color: var(--mitsu-extra-lime); }
+.color-comp-blue { color: var(--mitsu-comp-blue); }
+.color-comp-amber { color: var(--mitsu-comp-amber); }
+.color-comp-indigo { color: var(--mitsu-comp-indigo); }
+.color-comp-cyan { color: var(--mitsu-comp-cyan); }
+.color-dark-900 { color: var(--mitsu-dark-900); }
+.color-dark-700 { color: var(--mitsu-dark-700); }
+.color-dark-500 { color: var(--mitsu-dark-500); }
+.color-dark-300 { color: var(--mitsu-dark-300); }
+.color-light-000 { color: var(--mitsu-light-000); }
+.color-light-100 { color: var(--mitsu-light-100); }
+.color-light-200 { color: var(--mitsu-light-200); }
+.color-light-300 { color: var(--mitsu-light-300); }
+
+.bgr-primary { background-color: var(--mitsu-primary); }
+.bgr-primary-2 { background-color: var(--mitsu-primary-2); }
+.bgr-bg { background-color: var(--mitsu-bg); }
+.bgr-secondary { background-color: var(--mitsu-secondary); }
+.bgr-surface { background-color: var(--mitsu-surface); }
+.bgr-border { background-color: var(--mitsu-border); }
+.bgr-info { background-color: var(--mitsu-info); }
+.bgr-danger { background-color: var(--mitsu-danger); }
+.bgr-success { background-color: var(--mitsu-success); }
+.bgr-warning { background-color: var(--mitsu-warning); }
+.bgr-main-100 { background-color: var(--mitsu-main-100); }
+.bgr-main-300 { background-color: var(--mitsu-main-300); }
+.bgr-main-500 { background-color: var(--mitsu-main-500); }
+.bgr-main-700 { background-color: var(--mitsu-main-700); }
+.bgr-extra-teal { background-color: var(--mitsu-extra-teal); }
+.bgr-extra-orange { background-color: var(--mitsu-extra-orange); }
+.bgr-extra-magenta { background-color: var(--mitsu-extra-magenta); }
+.bgr-extra-lime { background-color: var(--mitsu-extra-lime); }
+.bgr-comp-blue { background-color: var(--mitsu-comp-blue); }
+.bgr-comp-amber { background-color: var(--mitsu-comp-amber); }
+.bgr-comp-indigo { background-color: var(--mitsu-comp-indigo); }
+.bgr-comp-cyan { background-color: var(--mitsu-comp-cyan); }
+.bgr-dark-900 { background-color: var(--mitsu-dark-900); }
+.bgr-dark-700 { background-color: var(--mitsu-dark-700); }
+.bgr-dark-500 { background-color: var(--mitsu-dark-500); }
+.bgr-dark-300 { background-color: var(--mitsu-dark-300); }
+.bgr-light-000 { background-color: var(--mitsu-light-000); }
+.bgr-light-100 { background-color: var(--mitsu-light-100); }
+.bgr-light-200 { background-color: var(--mitsu-light-200); }
+.bgr-light-300 { background-color: var(--mitsu-light-300); }
+
+/* Text utilities */
+.font-ui { font-family: var(--mitsu-font-ui); }
+.font-classic { font-family: var(--mitsu-font-classic); }
+.font-pixel { font-family: var(--mitsu-font-pixel); }
+.font-beauty { font-family: var(--mitsu-font-beauty); }
+.font-nerdy { font-family: var(--mitsu-font-nerdy); }
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-md { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+
+.weight-100 { font-weight: 100; }
+.weight-200 { font-weight: 200; }
+.weight-300 { font-weight: 300; }
+.weight-400 { font-weight: 400; }
+.weight-500 { font-weight: 500; }
+.weight-600 { font-weight: 600; }
+.weight-700 { font-weight: 700; }
+.weight-800 { font-weight: 800; }
+.weight-900 { font-weight: 900; }
+
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.2; }
+.leading-snug { line-height: 1.35; }
+.leading-normal { line-height: 1.55; }
+.leading-relaxed { line-height: 1.7; }
+.leading-loose { line-height: 1.9; }
+
+.tracking-tight { letter-spacing: -0.02em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.04em; }
+.tracking-wider { letter-spacing: 0.08em; }
+.tracking-widest { letter-spacing: 0.12em; }
+
+.word-tight { word-spacing: -0.04em; }
+.word-normal { word-spacing: 0; }
+.word-wide { word-spacing: 0.12em; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-shadow-none { text-shadow: none; }
+.text-shadow-sm { text-shadow: 0 1px 2px rgba(16, 24, 40, 0.22); }
+.text-shadow-md { text-shadow: 0 2px 6px rgba(16, 24, 40, 0.28); }
+.text-shadow-lg { text-shadow: 0 4px 14px rgba(16, 24, 40, 0.32); }
+.text-shadow-primary { text-shadow: 0 4px 16px color-mix(in oklab, var(--mitsu-primary) 45%, transparent); }
+
+.h1 { font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+.h2 { font-size: clamp(1.625rem, 3.2vw, 2.2rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.015em; }
+.h3 { font-size: clamp(1.375rem, 2.4vw, 1.75rem); line-height: 1.2; font-weight: 700; }
+.h4 { font-size: 1.25rem; line-height: 1.25; font-weight: 700; }
+.h5 { font-size: 1.125rem; line-height: 1.3; font-weight: 600; }
+.h6 { font-size: 1rem; line-height: 1.35; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.subline {
+  display: inline-block;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--mitsu-muted);
+}
+
+/* Parent-level text adjustment */
+.text-parent-tight > * { line-height: 1.25; }
+.text-parent-normal > * { line-height: 1.55; }
+.text-parent-relaxed > * { line-height: 1.75; }
+.text-parent-muted > * { color: var(--mitsu-muted); }
+.text-parent-strong > * { color: var(--mitsu-text); font-weight: 600; }
+.text-parent-balance > * { text-wrap: balance; }
+
+/* Position utilities */
+.pos-static { position: static; }
+.pos-relative { position: relative; }
+.pos-absolute { position: absolute; }
+.pos-fixed { position: fixed; }
+.pos-sticky { position: sticky; }
+
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+.inset-0 { inset: 0; }
+
+.pin-tl { top: 0; left: 0; }
+.pin-tr { top: 0; right: 0; }
+.pin-bl { bottom: 0; left: 0; }
+.pin-br { bottom: 0; right: 0; }
+
+.center-parent {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Multi-column text */
+.text-cols-1 { column-count: 1; }
+.text-cols-2 { column-count: 2; }
+.text-cols-3 { column-count: 3; }
+.text-cols-4 { column-count: 4; }
+.text-cols-5 { column-count: 5; }
+.text-col-gap-sm { column-gap: 1rem; }
+.text-col-gap-md { column-gap: 1.5rem; }
+.text-col-gap-lg { column-gap: 2.25rem; }
+.text-col-rule { column-rule: 1px solid var(--mitsu-border); }
+.text-cols-1 > *,
+.text-cols-2 > *,
+.text-cols-3 > *,
+.text-cols-4 > *,
+.text-cols-5 > * {
+  break-inside: avoid;
+}
+
+@media (max-width: 48rem) {
+  .text-cols-2,
+  .text-cols-3,
+  .text-cols-4,
+  .text-cols-5 {
+    column-count: 1;
+  }
+}
+
+.mitsu-radius-none { border-radius: 0; }
+.mitsu-radius-sm { border-radius: var(--mitsu-radius-sm); }
+.mitsu-radius-md { border-radius: var(--mitsu-radius-md); }
+.mitsu-radius-lg { border-radius: var(--mitsu-radius-lg); }
+.mitsu-radius-pill { border-radius: 999px; }
+.mitsu-radius-circle { border-radius: 9999px; }
+
+/* CSS does not support negative border-radius.
+   These classes provide a "negative radius" visual by cutting corners. */
+.mitsu-radius-cut-sm {
+  --mitsu-cut-size: 8px;
+  --mitsu-cut-border-color: var(--mitsu-border);
+  --mitsu-cut-border-width: 1px;
+  --mitsu-cut-fill: var(--mitsu-surface);
+  --mitsu-cut-path: polygon(
+    var(--mitsu-cut-size) 0,
+    calc(100% - var(--mitsu-cut-size)) 0,
+    100% var(--mitsu-cut-size),
+    100% calc(100% - var(--mitsu-cut-size)),
+    calc(100% - var(--mitsu-cut-size)) 100%,
+    var(--mitsu-cut-size) 100%,
+    0 calc(100% - var(--mitsu-cut-size)),
+    0 var(--mitsu-cut-size)
+  );
+  position: relative;
+  border-radius: 0;
+  border: var(--mitsu-cut-border-width) solid var(--mitsu-cut-border-color);
+  background: var(--mitsu-cut-fill);
+  clip-path: var(--mitsu-cut-path);
+}
+
+.mitsu-radius-cut-md {
+  --mitsu-cut-size: 14px;
+  --mitsu-cut-border-color: var(--mitsu-border);
+  --mitsu-cut-border-width: 1px;
+  --mitsu-cut-fill: var(--mitsu-surface);
+  --mitsu-cut-path: polygon(
+    var(--mitsu-cut-size) 0,
+    calc(100% - var(--mitsu-cut-size)) 0,
+    100% var(--mitsu-cut-size),
+    100% calc(100% - var(--mitsu-cut-size)),
+    calc(100% - var(--mitsu-cut-size)) 100%,
+    var(--mitsu-cut-size) 100%,
+    0 calc(100% - var(--mitsu-cut-size)),
+    0 var(--mitsu-cut-size)
+  );
+  position: relative;
+  border-radius: 0;
+  border: var(--mitsu-cut-border-width) solid var(--mitsu-cut-border-color);
+  background: var(--mitsu-cut-fill);
+  clip-path: var(--mitsu-cut-path);
+}
+
+.mitsu-hidden { display: none !important; }
+
+.mitsu-grid {
+  display: grid;
+  gap: var(--mitsu-space-md);
+}
+
+.mitsu-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.mitsu-w-10 { width: 10%; }
+.mitsu-w-20 { width: 20%; }
+.mitsu-w-25 { width: 25%; }
+.mitsu-w-33 { width: 33.3333%; }
+.mitsu-w-40 { width: 40%; }
+.mitsu-w-50 { width: 50%; }
+.mitsu-w-60 { width: 60%; }
+.mitsu-w-66 { width: 66.6667%; }
+.mitsu-w-75 { width: 75%; }
+.mitsu-w-80 { width: 80%; }
+.mitsu-w-100 { width: 100%; }
+.mitsu-w-auto { width: auto; }
+.mitsu-w-fit { width: fit-content; }
+.mitsu-max-w-sm { max-width: 24rem; }
+.mitsu-max-w-md { max-width: 36rem; }
+.mitsu-max-w-lg { max-width: 48rem; }
+
+.mitsu-h-25 { height: 25%; }
+.mitsu-h-33 { height: 33.3333%; }
+.mitsu-h-50 { height: 50%; }
+.mitsu-h-66 { height: 66.6667%; }
+.mitsu-h-75 { height: 75%; }
+.mitsu-h-100 { height: 100%; }
+.mitsu-h-auto { height: auto; }
+.mitsu-h-fit { height: fit-content; }
+.mitsu-h-xs { height: var(--mitsu-space-xs); }
+.mitsu-h-sm { height: var(--mitsu-space-sm); }
+.mitsu-h-md { height: var(--mitsu-space-md); }
+.mitsu-h-lg { height: var(--mitsu-space-lg); }
+.mitsu-h-xl { height: var(--mitsu-space-xl); }
+.mitsu-min-h-sm { min-height: 8rem; }
+.mitsu-min-h-md { min-height: 12rem; }
+.mitsu-min-h-lg { min-height: 16rem; }
+
+.mitsu-shadow-none { box-shadow: none; }
+.mitsu-shadow-xs { box-shadow: var(--mitsu-shadow-xs); }
+.mitsu-shadow-sm { box-shadow: var(--mitsu-shadow-sm); }
+.mitsu-shadow-md { box-shadow: var(--mitsu-shadow-md); }
+.mitsu-shadow-lg { box-shadow: var(--mitsu-shadow-lg); }
+.mitsu-shadow-xl { box-shadow: var(--mitsu-shadow-xl); }
+.mitsu-shadow-primary { box-shadow: var(--mitsu-shadow-primary); }
+.mitsu-shadow-info { box-shadow: var(--mitsu-shadow-info); }
+.mitsu-shadow-success { box-shadow: var(--mitsu-shadow-success); }
+.mitsu-shadow-danger { box-shadow: var(--mitsu-shadow-danger); }
+
+.mitsu-navbar {
+  background: var(--mitsu-surface);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.mitsu-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--mitsu-space-md);
+  flex-wrap: wrap;
+}
+
+.mitsu-nav-list a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.3rem 0.55rem;
+  color: var(--mitsu-text);
+  text-decoration: none;
+}
+
+.mitsu-nav-list a:hover,
+.mitsu-nav-list a:focus-visible {
+  border-color: var(--mitsu-border);
+  background: var(--mitsu-secondary);
+  color: var(--mitsu-primary);
+}
+
+/* Side navigation (docs/menu style) */
+.mitsu-sidenav {
+  width: min(18rem, 100%);
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-md);
+  background: var(--mitsu-surface);
+  padding: 0.65rem;
+}
+
+.mitsu-sidenav-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--mitsu-muted) 78%, var(--mitsu-text));
+}
+
+.mitsu-sidenav-group {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.mitsu-sidenav-toggle {
+  margin: 0;
+}
+
+.mitsu-sidenav-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--mitsu-text);
+  padding: 0.38rem 0.4rem;
+  border-radius: var(--mitsu-radius-sm);
+}
+
+.mitsu-sidenav-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+
+.mitsu-sidenav-toggle > summary::before {
+  content: "▸";
+  color: var(--mitsu-muted);
+  font-size: 0.8rem;
+  transition: transform 120ms ease;
+}
+
+.mitsu-sidenav-toggle[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.mitsu-sidenav-sub {
+  margin: 0.2rem 0 0.15rem 1.55rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.1rem;
+}
+
+.mitsu-sidenav-sub a {
+  display: block;
+  color: color-mix(in oklab, var(--mitsu-muted) 86%, var(--mitsu-text));
+  text-decoration: none;
+  padding: 0.35rem 0.48rem;
+  border-radius: var(--mitsu-radius-sm);
+}
+
+.mitsu-sidenav-sub a:hover,
+.mitsu-sidenav-sub a:focus-visible {
+  color: var(--mitsu-text);
+  background: color-mix(in oklab, var(--mitsu-secondary) 60%, transparent);
+}
+
+.mitsu-sidenav-sub a.is-active {
+  color: var(--mitsu-primary);
+  background: color-mix(in oklab, var(--mitsu-main-100) 70%, transparent);
+  border-left: 2px solid var(--mitsu-primary);
+  padding-left: calc(0.48rem - 2px);
+}
+
+.mitsu-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.mitsu-logo-mark {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--mitsu-border) 65%, transparent);
+}
+
+.mitsu-logo span { color: var(--mitsu-primary); }
+
+.mitsu-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--mitsu-muted);
+}
+
+.mitsu-lead {
+  font-size: 1.1rem;
+  color: var(--mitsu-muted);
+}
+
+.mitsu-card {
+  background: var(--mitsu-surface);
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-lg);
+  box-shadow: var(--mitsu-shadow);
+  padding: var(--mitsu-space-lg);
+}
+
+.mitsu-card a:not(.mitsu-btn) {
+  color: #374151;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  transition: color 160ms ease, background-size 180ms ease;
+}
+
+.mitsu-card a:not(.mitsu-btn):hover,
+.mitsu-card a:not(.mitsu-btn):focus-visible {
+  color: #1f2937;
+  background-size: 100% 2px;
+}
+
+.mitsu-help-inline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.24rem;
+}
+
+.mitsu-help-btn {
+  width: 0.88rem;
+  height: 0.88rem;
+  border: 1px solid color-mix(in oklab, var(--mitsu-muted) 35%, var(--mitsu-border));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--mitsu-muted) 10%, var(--mitsu-surface));
+  color: color-mix(in oklab, var(--mitsu-muted) 72%, var(--mitsu-text));
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.62rem;
+  line-height: 1;
+  padding: 0;
+  cursor: help;
+  transition: transform 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.mitsu-help-btn:hover,
+.mitsu-help-btn:focus-visible {
+  border-color: color-mix(in oklab, var(--mitsu-primary) 45%, var(--mitsu-border));
+  color: color-mix(in oklab, var(--mitsu-primary) 68%, var(--mitsu-text));
+  transform: translateY(-1px);
+}
+
+.mitsu-help-tip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.45rem);
+  z-index: 30;
+  min-width: 14rem;
+  max-width: 24rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  background: var(--mitsu-surface);
+  color: var(--mitsu-text);
+  font-size: 0.78rem;
+  box-shadow: var(--mitsu-shadow-sm);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.mitsu-help-inline:hover .mitsu-help-tip,
+.mitsu-help-inline:focus-within .mitsu-help-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mitsu-btn {
+  --mitsu-btn-bg: var(--mitsu-primary);
+  --mitsu-btn-bg-hover: var(--mitsu-primary-2);
+  --mitsu-btn-fg: #ffffff;
+  border: 1px solid transparent;
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.62rem 1rem;
+  background: var(--mitsu-btn-bg);
+  color: var(--mitsu-btn-fg);
+  font: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+
+.mitsu-btn:hover,
+.mitsu-btn:focus-visible {
+  background: var(--mitsu-btn-bg-hover);
+}
+
+.mitsu-btn-group {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  overflow: hidden;
+  background: var(--mitsu-surface);
+}
+
+.mitsu-btn-group > .mitsu-btn {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+.mitsu-btn-group > .mitsu-btn + .mitsu-btn {
+  border-left: 1px solid color-mix(in oklab, var(--mitsu-border) 82%, transparent);
+}
+
+.mitsu-btn-secondary {
+  --mitsu-btn-bg: var(--mitsu-secondary);
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-secondary) 84%, var(--mitsu-text));
+  --mitsu-btn-fg: var(--mitsu-text);
+  border-color: var(--mitsu-border);
+}
+
+.mitsu-btn-ghost {
+  --mitsu-btn-bg: transparent;
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-secondary) 88%, transparent);
+  --mitsu-btn-fg: var(--mitsu-text);
+  border-color: var(--mitsu-border);
+}
+
+.theme-toggle-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 2.1rem;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.02rem;
+  line-height: 1;
+}
+
+.mitsu-btn-outline {
+  background: transparent;
+  color: color-mix(in oklab, var(--mitsu-btn-bg) 85%, var(--mitsu-text));
+  border-color: color-mix(in oklab, var(--mitsu-btn-bg) 62%, var(--mitsu-border));
+}
+
+.mitsu-btn-outline:hover,
+.mitsu-btn-outline:focus-visible {
+  background: color-mix(in oklab, var(--mitsu-btn-bg) 14%, transparent);
+}
+
+.mitsu-btn-double-outline {
+  border-style: double;
+  border-width: 3px;
+  padding: calc(0.62rem - 2px) calc(1rem - 2px);
+}
+
+.mitsu-btn-sm.mitsu-btn-double-outline {
+  padding: calc(0.42rem - 2px) calc(0.72rem - 2px);
+}
+
+.mitsu-btn-lg.mitsu-btn-double-outline {
+  padding: calc(0.82rem - 2px) calc(1.2rem - 2px);
+}
+
+.mitsu-btn-info {
+  --mitsu-btn-bg: color-mix(in oklab, var(--mitsu-info) 86%, black 6%);
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-info) 90%, black 10%);
+}
+
+.mitsu-btn-success {
+  --mitsu-btn-bg: color-mix(in oklab, var(--mitsu-success) 86%, black 6%);
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-success) 90%, black 10%);
+}
+
+.mitsu-btn-warning {
+  --mitsu-btn-bg: color-mix(in oklab, var(--mitsu-warning) 88%, white 12%);
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-warning) 92%, black 4%);
+  --mitsu-btn-fg: #2a1b00;
+}
+
+.mitsu-btn-danger {
+  --mitsu-btn-bg: color-mix(in oklab, var(--mitsu-danger) 88%, black 6%);
+  --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-danger) 92%, black 10%);
+}
+
+.mitsu-btn-sm {
+  padding: 0.42rem 0.72rem;
+  font-size: 0.82rem;
+}
+
+.mitsu-btn-md {
+  padding: 0.62rem 1rem;
+  font-size: 0.95rem;
+}
+
+.mitsu-btn-lg {
+  padding: 0.82rem 1.2rem;
+  font-size: 1rem;
+}
+
+.mitsu-btn-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: color-mix(in oklab, var(--mitsu-btn-fg) 16%, transparent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mitsu-btn-icon-only {
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+}
+
+.mitsu-btn-badge {
+  min-width: 1.2rem;
+  height: 1.2rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--mitsu-btn-bg);
+  background: color-mix(in oklab, var(--mitsu-btn-fg) 88%, transparent);
+}
+
+.mitsu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-secondary);
+  color: var(--mitsu-text);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.mitsu-badge-default {
+  background: var(--mitsu-secondary);
+  border-color: var(--mitsu-border);
+  color: var(--mitsu-text);
+}
+
+.mitsu-badge-info {
+  background: color-mix(in oklab, var(--mitsu-info) 18%, var(--mitsu-surface));
+  border-color: color-mix(in oklab, var(--mitsu-info) 48%, var(--mitsu-border));
+  color: var(--mitsu-info);
+}
+
+.mitsu-badge-new {
+  background: color-mix(in oklab, var(--mitsu-primary) 18%, var(--mitsu-surface));
+  border-color: color-mix(in oklab, var(--mitsu-primary) 52%, var(--mitsu-border));
+  color: var(--mitsu-primary-2);
+}
+
+.mitsu-badge-success {
+  background: color-mix(in oklab, #1d9d57 18%, var(--mitsu-surface));
+  border-color: color-mix(in oklab, #1d9d57 48%, var(--mitsu-border));
+  color: #1d9d57;
+}
+
+.mitsu-badge-warning {
+  background: color-mix(in oklab, #b56a00 18%, var(--mitsu-surface));
+  border-color: color-mix(in oklab, #b56a00 45%, var(--mitsu-border));
+  color: #8a4e00;
+}
+
+.mitsu-badge-danger {
+  background: color-mix(in oklab, var(--mitsu-danger) 16%, var(--mitsu-surface));
+  border-color: color-mix(in oklab, var(--mitsu-danger) 50%, var(--mitsu-border));
+  color: var(--mitsu-danger);
+}
+
+.mitsu-badge-icon {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: color-mix(in oklab, currentColor 12%, transparent);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.mitsu-badge-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.mitsu-sub-badge {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.48rem;
+}
+
+.mitsu-alert {
+  --mitsu-alert-tone: var(--mitsu-info);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 0.6rem;
+  border: 1px solid color-mix(in oklab, var(--mitsu-alert-tone) 45%, var(--mitsu-border));
+  border-radius: var(--mitsu-radius-md);
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--mitsu-alert-tone) 12%, var(--mitsu-surface)) 0%, var(--mitsu-surface) 70%);
+  padding: 0.75rem 0.85rem;
+  overflow: hidden;
+}
+
+.mitsu-alert::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 0.2rem;
+  background: color-mix(in oklab, var(--mitsu-alert-tone) 70%, transparent);
+}
+
+.mitsu-alert-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 0.42rem;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  color: color-mix(in oklab, var(--mitsu-alert-tone) 85%, black 10%);
+  background: color-mix(in oklab, var(--mitsu-alert-tone) 22%, var(--mitsu-surface));
+  border: 1px solid color-mix(in oklab, var(--mitsu-alert-tone) 45%, var(--mitsu-border));
+}
+
+.mitsu-alert-title {
+  margin: 0;
+  font-size: 0.93rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: color-mix(in oklab, var(--mitsu-alert-tone) 70%, var(--mitsu-text));
+}
+
+.mitsu-alert-copy {
+  margin: 0.2rem 0 0;
+  font-size: 0.88rem;
+}
+
+.mitsu-alert-dismiss {
+  --mitsu-alert-dismiss-size: 1.45rem;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  background: transparent;
+  color: color-mix(in oklab, var(--mitsu-alert-tone) 70%, var(--mitsu-text));
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1;
+  width: var(--mitsu-alert-dismiss-size);
+  height: var(--mitsu-alert-dismiss-size);
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mitsu-alert-dismiss:hover,
+.mitsu-alert-dismiss:focus-visible {
+  border-color: color-mix(in oklab, var(--mitsu-alert-tone) 40%, var(--mitsu-border));
+  background: color-mix(in oklab, var(--mitsu-alert-tone) 16%, transparent);
+}
+
+.mitsu-alert-info { --mitsu-alert-tone: var(--mitsu-info); }
+.mitsu-alert-success { --mitsu-alert-tone: var(--mitsu-success); }
+.mitsu-alert-warning { --mitsu-alert-tone: var(--mitsu-warning); }
+.mitsu-alert-danger { --mitsu-alert-tone: var(--mitsu-danger); }
+.mitsu-alert-neutral { --mitsu-alert-tone: var(--mitsu-muted); }
+
+.mitsu-alert-with-left-dismiss {
+  grid-template-columns: auto auto 1fr;
+}
+
+.mitsu-alert-dismiss-left {
+  order: -1;
+}
+
+.mitsu-attention-pulse {
+  animation: mitsu-attention-pulse 1.2s ease-in-out 2;
+}
+
+.mitsu-attention-shake {
+  animation: mitsu-attention-shake 0.45s ease-in-out 2;
+}
+
+@keyframes mitsu-attention-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--mitsu-alert-tone, var(--mitsu-primary)) 35%, transparent); }
+  70% { box-shadow: 0 0 0 0.55rem color-mix(in oklab, var(--mitsu-alert-tone, var(--mitsu-primary)) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--mitsu-alert-tone, var(--mitsu-primary)) 0%, transparent); }
+}
+
+@keyframes mitsu-attention-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+
+.mitsu-tabs {
+  background: var(--mitsu-surface);
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-lg);
+  padding: var(--mitsu-space-lg);
+}
+
+.mitsu-tab-list {
+  display: flex;
+  gap: var(--mitsu-space-xs);
+  margin-bottom: var(--mitsu-space-md);
+  flex-wrap: wrap;
+}
+
+.mitsu-tab-list [role="tab"] {
+  background: var(--mitsu-secondary);
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.45rem 0.75rem;
+  color: var(--mitsu-text);
+  cursor: pointer;
+}
+
+.mitsu-tab-list [role="tab"][aria-selected="true"] {
+  background: var(--mitsu-primary);
+  border-color: var(--mitsu-primary);
+  color: #fff;
+}
+
+.mitsu-dialog {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  padding: var(--mitsu-space-md);
+}
+
+.mitsu-dialog-card {
+  width: min(30rem, 100%);
+  background: var(--mitsu-surface);
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-lg);
+  box-shadow: var(--mitsu-shadow);
+  padding: var(--mitsu-space-lg);
+}
+
+.mitsu-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.mitsu-input {
+  width: 100%;
+  padding: 0.62rem 0.7rem;
+  border-radius: var(--mitsu-radius-sm);
+  border: 1px solid var(--mitsu-border);
+  background: var(--mitsu-surface);
+  color: var(--mitsu-text);
+}
+
+.mitsu-input:focus {
+  border-color: var(--mitsu-primary);
+  outline: 2px solid color-mix(in oklab, var(--mitsu-primary) 40%, transparent);
+  outline-offset: 1px;
+}
+
+.mitsu-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.mitsu-skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 999;
+  background: var(--mitsu-text);
+  color: var(--mitsu-surface);
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.4rem 0.7rem;
+}
+
+@media (max-width: 47.99rem) {
+  .mitsu-nav-list {
+    flex-direction: column;
+    padding-block: var(--mitsu-space-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+
+  .mitsu-attention-pulse,
+  .mitsu-attention-shake {
+    animation: none !important;
+  }
+}
