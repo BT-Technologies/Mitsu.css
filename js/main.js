@@ -118,6 +118,63 @@
     });
   }
 
+  function initFakeTimeline() {
+    var timelines = document.querySelectorAll('[data-mitsu-fake-timeline]');
+    timelines.forEach(function (timeline) {
+      var rows = Array.prototype.slice.call(timeline.querySelectorAll('li'));
+      if (!rows.length) return;
+
+      function formatAgo(seconds) {
+        if (seconds < 60) return seconds + 's ago';
+        var mins = Math.floor(seconds / 60);
+        return mins + 'm ago';
+      }
+
+      var active = rows.findIndex(function (row) { return row.classList.contains('is-active'); });
+      if (active < 0) active = 0;
+
+      function tick() {
+        rows.forEach(function (row, idx) {
+          row.classList.toggle('is-active', idx === active);
+          var timeEl = row.querySelector('.timeline-time');
+          if (!timeEl) return;
+          var sec = parseInt(timeEl.getAttribute('data-seconds') || '0', 10) || 0;
+          sec += 3;
+          timeEl.setAttribute('data-seconds', String(sec));
+          timeEl.textContent = formatAgo(sec);
+        });
+        active = (active + 1) % rows.length;
+      }
+
+      window.setInterval(tick, 3000);
+    });
+  }
+
+  function initDualStateButtons() {
+    var groups = document.querySelectorAll('[data-mitsu-dual-state]');
+    groups.forEach(function (group) {
+      var options = Array.prototype.slice.call(group.querySelectorAll('.mitsu-btn-option'));
+      if (!options.length) return;
+
+      function setActive(target) {
+        options.forEach(function (opt) {
+          var on = opt === target;
+          opt.classList.toggle('is-selected', on);
+          opt.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+
+        var out = document.querySelector('[data-mitsu-dual-output]');
+        if (out) out.textContent = target.getAttribute('data-value') || '';
+      }
+
+      options.forEach(function (option) {
+        option.addEventListener('click', function () {
+          setActive(option);
+        });
+      });
+    });
+  }
+
   window.MitsuCSS.ready(function () {
     window.MitsuCSS.init();
     setYear();
@@ -125,5 +182,7 @@
     initVisitedStatus();
     initCardFlip();
     initDialogAssist();
+    initFakeTimeline();
+    initDualStateButtons();
   });
 })();

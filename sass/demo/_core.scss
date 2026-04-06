@@ -360,6 +360,43 @@ main code {
   background: color-mix(in oklab, var(--mitsu-primary) 82%, white 18%);
 }
 
+.timeline-demo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.timeline-demo li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  padding: 0.35rem 0.48rem;
+  background: color-mix(in oklab, var(--mitsu-surface) 92%, var(--mitsu-secondary) 8%);
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.timeline-demo li.is-active {
+  border-color: color-mix(in oklab, var(--mitsu-primary) 45%, var(--mitsu-border));
+  background: color-mix(in oklab, var(--mitsu-primary) 10%, var(--mitsu-surface) 90%);
+  transform: translateX(2px);
+}
+
+.timeline-time {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--mitsu-muted);
+  min-width: 4.2rem;
+}
+
+.timeline-text {
+  font-size: 0.86rem;
+}
+
 .dialog-drop-parent {
   position: relative;
   min-height: 0.2rem;
@@ -464,7 +501,7 @@ main code {
 
 .cards-demo-item {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: linear-gradient(
     170deg,
     color-mix(in oklab, var(--mitsu-surface) 88%, white 12%) 0%,
