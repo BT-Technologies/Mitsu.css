@@ -40,6 +40,45 @@
   border-left: 1px solid color-mix(in oklab, var(--mitsu-border) 82%, transparent);
 }
 
+.mitsu-btn-dual {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--mitsu-border);
+  border-radius: var(--mitsu-radius-sm);
+  overflow: hidden;
+  background: var(--mitsu-surface);
+}
+
+.mitsu-btn-option {
+  appearance: none;
+  border: 0;
+  border-right: 1px solid color-mix(in oklab, var(--mitsu-border) 82%, transparent);
+  background: color-mix(in oklab, var(--mitsu-secondary) 65%, transparent);
+  color: var(--mitsu-text);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.mitsu-btn-option:last-child {
+  border-right: 0;
+}
+
+.mitsu-btn-option:hover,
+.mitsu-btn-option:focus-visible {
+  background: color-mix(in oklab, var(--mitsu-secondary) 82%, transparent);
+}
+
+.mitsu-btn-option.is-selected,
+.mitsu-btn-option[aria-pressed="true"] {
+  background: var(--mitsu-primary);
+  color: #ffffff;
+}
+
 .mitsu-btn-secondary {
   --mitsu-btn-bg: var(--mitsu-secondary);
   --mitsu-btn-bg-hover: color-mix(in oklab, var(--mitsu-secondary) 84%, var(--mitsu-text));
@@ -231,6 +270,27 @@
 .mitsu-sub-badge {
   font-size: 0.72rem;
   padding: 0.15rem 0.48rem;
+  margin-left: 0.15rem;
+}
+
+.mitsu-badge-pulse {
+  animation: mitsu-badge-pulse 1.25s ease-in-out infinite;
+}
+
+.mitsu-badge-vibrate {
+  animation: mitsu-badge-vibrate 0.4s linear infinite;
+}
+
+@keyframes mitsu-badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes mitsu-badge-vibrate {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
 }
 
 .mitsu-alert {
